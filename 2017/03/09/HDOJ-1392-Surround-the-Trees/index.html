@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="图论,最短路,SPFA," />
+  <meta name="keywords" content="计算几何,凸包,Andrew," />
 
 
 
@@ -89,23 +89,23 @@
 
 <meta name="description" content="链接
 
-题意在有向图中，求从出发点到每个车站的最短距离+从每个车站回到出发点的最短距离是多少。
-分析出发点到每个车站的最短距离一次 SPFA 就能求出来。从每个车站回到出发点可以反向建图，再求一次出发点到每个车站的 SPFA 就能解决。">
+题意在笛卡尔坐标系中有 n 棵树，用一条绳子将所有树全都围起来，求所需绳子长度的最小值。
+分析凸包的模板题。但是数据有坑点，如果只有两个点，直接输出两点距离即可。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HDOJ-1535 Invitation Cards">
-<meta property="og:url" content="http://yoursite.com/2017/03/05/HDOJ-1535-Invitation-Cards/index.html">
+<meta property="og:title" content="HDOJ-1392 Surround the Trees">
+<meta property="og:url" content="http://yoursite.com/2017/03/09/HDOJ-1392-Surround-the-Trees/index.html">
 <meta property="og:site_name" content="zxnm19980609's Blog">
 <meta property="og:description" content="链接
 
-题意在有向图中，求从出发点到每个车站的最短距离+从每个车站回到出发点的最短距离是多少。
-分析出发点到每个车站的最短距离一次 SPFA 就能求出来。从每个车站回到出发点可以反向建图，再求一次出发点到每个车站的 SPFA 就能解决。">
-<meta property="og:updated_time" content="2017-03-09T15:32:39.575Z">
+题意在笛卡尔坐标系中有 n 棵树，用一条绳子将所有树全都围起来，求所需绳子长度的最小值。
+分析凸包的模板题。但是数据有坑点，如果只有两个点，直接输出两点距离即可。">
+<meta property="og:updated_time" content="2017-03-09T15:33:32.382Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HDOJ-1535 Invitation Cards">
+<meta name="twitter:title" content="HDOJ-1392 Surround the Trees">
 <meta name="twitter:description" content="链接
 
-题意在有向图中，求从出发点到每个车站的最短距离+从每个车站回到出发点的最短距离是多少。
-分析出发点到每个车站的最短距离一次 SPFA 就能求出来。从每个车站回到出发点可以反向建图，再求一次出发点到每个车站的 SPFA 就能解决。">
+题意在笛卡尔坐标系中有 n 棵树，用一条绳子将所有树全都围起来，求所需绳子长度的最小值。
+分析凸包的模板题。但是数据有坑点，如果只有两个点，直接输出两点距离即可。">
 
 
 
@@ -133,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/03/05/HDOJ-1535-Invitation-Cards/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/09/HDOJ-1392-Surround-the-Trees/"/>
 
 
 
 
 
-  <title> HDOJ-1535 Invitation Cards | zxnm19980609's Blog </title>
+  <title> HDOJ-1392 Surround the Trees | zxnm19980609's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -288,7 +288,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/05/HDOJ-1535-Invitation-Cards/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/09/HDOJ-1392-Surround-the-Trees/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="筽邝">
@@ -309,7 +309,7 @@
             
             
               
-                HDOJ-1535 Invitation Cards
+                HDOJ-1392 Surround the Trees
               
             
           </h1>
@@ -324,8 +324,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-05T22:22:31+08:00">
-                2017-03-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-09T23:24:13+08:00">
+                2017-03-09
               </time>
             
 
@@ -394,11 +394,11 @@
 
       
         <blockquote>
-<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1535" target="_blank" rel="external">链接</a></p>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1932" target="_blank" rel="external">链接</a></p>
 </blockquote>
-<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>在有向图中，求从出发点到每个车站的最短距离+从每个车站回到出发点的最短距离是多少。</p>
-<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>出发点到每个车站的最短距离一次 SPFA 就能求出来。从每个车站回到出发点可以反向建图，再求一次出发点到每个车站的 SPFA 就能解决。<br><a id="more"></a></p>
-<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">typedef</span> pair&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; PII;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAXN=<span class="number">1000010</span>;</div><div class="line"><span class="keyword">int</span> sum,n,m,dis[MAXN],u[MAXN],v[MAXN],w[MAXN];</div><div class="line"><span class="keyword">bool</span> vis[MAXN];</div><div class="line"><span class="built_in">vector</span>&lt;PII&gt; adjlist[MAXN];</div><div class="line"><span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt; Q;</div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n; i++)</div><div class="line">        adjlist[i].clear();</div><div class="line">    <span class="built_in">memset</span>(vis,<span class="literal">false</span>,<span class="keyword">sizeof</span>(vis));</div><div class="line">    <span class="built_in">memset</span>(dis,<span class="number">0x3F</span>,<span class="keyword">sizeof</span>(dis));</div><div class="line">    <span class="keyword">while</span> (!Q.empty()) Q.pop();</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">spfa</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> p;</div><div class="line">    PII t;</div><div class="line">    Q.push(<span class="number">1</span>); vis[<span class="number">1</span>]=<span class="literal">true</span>; dis[<span class="number">1</span>]=<span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span> (!Q.empty()) &#123;</div><div class="line">        p=Q.front(); Q.pop(); vis[p]=<span class="literal">false</span>;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;adjlist[p].size(); i++) &#123;</div><div class="line">            t=adjlist[p][i];</div><div class="line">            <span class="keyword">if</span> (dis[t.first]&gt;dis[p]+t.second) &#123;</div><div class="line">                dis[t.first]=dis[p]+t.second;</div><div class="line">                vis[t.first]=<span class="literal">true</span>;</div><div class="line">                Q.push(t.first);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> T;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;T);</div><div class="line">    <span class="keyword">while</span> (T--) &#123;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</div><div class="line">        init();</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;m; i++) &#123;</div><div class="line">            <span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;u[i],&amp;v[i],&amp;w[i]);</div><div class="line">            adjlist[u[i]].push_back(make_pair(v[i],w[i]));</div><div class="line">        &#125;</div><div class="line">        spfa();</div><div class="line">        sum=<span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n; i++)</div><div class="line">            sum+=dis[i];</div><div class="line">        init();</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;m; i++)</div><div class="line">            adjlist[v[i]].push_back(make_pair(u[i],w[i]));</div><div class="line">        spfa();</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n; i++)</div><div class="line">            sum+=dis[i];</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,sum);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>在笛卡尔坐标系中有 n 棵树，用一条绳子将所有树全都围起来，求所需绳子长度的最小值。</p>
+<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>凸包的模板题。但是数据有坑点，如果只有两个点，直接输出两点距离即可。<br><a id="more"></a></p>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</div><div class="line"><span class="keyword">class</span> CPoint &#123;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">    LL x,y;</div><div class="line">    CPoint() &#123;&#125;</div><div class="line">    CPoint(LL _x,LL _y):x(_x),y(_y) &#123;&#125;</div><div class="line">    CPoint <span class="keyword">operator</span> - (<span class="keyword">const</span> CPoint &amp;b) <span class="keyword">const</span> &#123;</div><div class="line">        <span class="keyword">return</span> CPoint(x-b.x,y-b.y);</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"><span class="keyword">int</span> n;</div><div class="line">CPoint p[<span class="number">110</span>],ch[<span class="number">110</span>];</div><div class="line"><span class="function">LL <span class="title">Cross</span><span class="params">(<span class="keyword">const</span> CPoint &amp;a,<span class="keyword">const</span> CPoint &amp;b)</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> a.x*b.y-a.y*b.x;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(<span class="keyword">const</span> CPoint &amp;a,<span class="keyword">const</span> CPoint &amp;b)</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> (a.x&lt;b.x ||(a.x==b.x &amp;&amp; a.y&lt;b.y));</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">Andrew</span><span class="params">()</span> </span>&#123;</div><div class="line">    sort(p,p+n,cmp);</div><div class="line">    <span class="keyword">int</span> m=<span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++) &#123;</div><div class="line">        <span class="keyword">while</span> (m&gt;<span class="number">1</span> &amp;&amp; Cross(ch[m<span class="number">-1</span>]-ch[m<span class="number">-2</span>],p[i]-ch[m<span class="number">-2</span>])&lt;<span class="number">0</span>) m--;</div><div class="line">        ch[m++]=p[i];</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">int</span> k=m;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=n<span class="number">-2</span>; i&gt;=<span class="number">0</span>; i--) &#123;</div><div class="line">        <span class="keyword">while</span> (m&gt;k &amp;&amp; Cross(ch[m<span class="number">-1</span>]-ch[m<span class="number">-2</span>],p[i]-ch[m<span class="number">-2</span>])&lt;<span class="number">0</span>) m--;</div><div class="line">        ch[m++]=p[i];</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> m;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">double</span> <span class="title">dis</span><span class="params">(<span class="keyword">const</span> CPoint &amp;a,<span class="keyword">const</span> CPoint &amp;b)</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">sqrt</span>((a.x-b.x)*(a.x-b.x)+(a.y-b.y)*(a.y-b.y));</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">while</span> (~<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n) &amp;&amp; n) &#123;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++)</div><div class="line">            <span class="built_in">scanf</span>(<span class="string">"%lld%lld"</span>,&amp;p[i].x,&amp;p[i].y);</div><div class="line">        <span class="keyword">if</span> (n==<span class="number">2</span>) &#123;</div><div class="line">            <span class="built_in">printf</span>(<span class="string">"%.2f\n"</span>,dis(p[<span class="number">0</span>],p[<span class="number">1</span>]));</div><div class="line">            <span class="keyword">continue</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">int</span> cnt=Andrew();</div><div class="line">        ch[cnt]=ch[<span class="number">0</span>];</div><div class="line">        <span class="keyword">double</span> sum=<span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;cnt; i++)</div><div class="line">            sum+=dis(ch[i],ch[i+<span class="number">1</span>]);</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%.2f\n"</span>,sum);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -422,11 +422,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/图论/" rel="tag"># 图论</a>
+            <a href="/tags/计算几何/" rel="tag"># 计算几何</a>
           
-            <a href="/tags/最短路/" rel="tag"># 最短路</a>
+            <a href="/tags/凸包/" rel="tag"># 凸包</a>
           
-            <a href="/tags/SPFA/" rel="tag"># SPFA</a>
+            <a href="/tags/Andrew/" rel="tag"># Andrew</a>
           
         </div>
       
@@ -439,8 +439,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/04/A-new-world/" rel="next" title="A New World">
-                <i class="fa fa-chevron-left"></i> A New World
+              <a href="/2017/03/09/HDOJ-2509-Be-the-Winner/" rel="next" title="HDOJ-2509 Be the Winner">
+                <i class="fa fa-chevron-left"></i> HDOJ-2509 Be the Winner
               </a>
             
           </div>
@@ -448,10 +448,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/09/HDOJ-2509-Be-the-Winner/" rel="prev" title="HDOJ-2509 Be the Winner">
-                HDOJ-2509 Be the Winner <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
