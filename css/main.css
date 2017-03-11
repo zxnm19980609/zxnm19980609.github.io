@@ -1699,7 +1699,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #1411cd;
+  background: #9d4df0;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2867,6 +2867,8 @@ pre .javascript .function {
   }
 }
 body {
-  background: url("/images/backGround.jpg");
+  background: url("/images/white.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
