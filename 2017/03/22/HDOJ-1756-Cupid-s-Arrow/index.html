@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="计算几何,凸包," />
+  <meta name="keywords" content="计算几何,射线法," />
 
 
 
@@ -89,23 +89,23 @@
 
 <meta name="description" content="链接
 
-题意在笛卡尔坐标系中有 n 棵树，用一条绳子将所有树全都围起来，求所需绳子长度的最小值。
-分析凸包的模板题。但是数据有坑点，如果只有两个点，直接输出两点距离即可。">
+题意按顺时针方向给出 n 个多边形的顶点。之后给出 m 个点，判断这些是否都在多边形内。
+分析可以用射线法解决这个问题，首先判断给定的点是否在多边形的边上，若不在，引一条射线，判断射线与多边形的交点个数，若为奇数个，则该点在多边形内。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HDOJ-1392 Surround the Trees">
-<meta property="og:url" content="http://yoursite.com/2017/03/09/HDOJ-1392-Surround-the-Trees/index.html">
+<meta property="og:title" content="HDOJ-1756 Cupid's Arrow">
+<meta property="og:url" content="http://yoursite.com/2017/03/22/HDOJ-1756-Cupid-s-Arrow/index.html">
 <meta property="og:site_name" content="zxnm19980609's Blog">
 <meta property="og:description" content="链接
 
-题意在笛卡尔坐标系中有 n 棵树，用一条绳子将所有树全都围起来，求所需绳子长度的最小值。
-分析凸包的模板题。但是数据有坑点，如果只有两个点，直接输出两点距离即可。">
-<meta property="og:updated_time" content="2017-03-20T00:53:46.294Z">
+题意按顺时针方向给出 n 个多边形的顶点。之后给出 m 个点，判断这些是否都在多边形内。
+分析可以用射线法解决这个问题，首先判断给定的点是否在多边形的边上，若不在，引一条射线，判断射线与多边形的交点个数，若为奇数个，则该点在多边形内。">
+<meta property="og:updated_time" content="2017-03-23T13:54:11.411Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HDOJ-1392 Surround the Trees">
+<meta name="twitter:title" content="HDOJ-1756 Cupid's Arrow">
 <meta name="twitter:description" content="链接
 
-题意在笛卡尔坐标系中有 n 棵树，用一条绳子将所有树全都围起来，求所需绳子长度的最小值。
-分析凸包的模板题。但是数据有坑点，如果只有两个点，直接输出两点距离即可。">
+题意按顺时针方向给出 n 个多边形的顶点。之后给出 m 个点，判断这些是否都在多边形内。
+分析可以用射线法解决这个问题，首先判断给定的点是否在多边形的边上，若不在，引一条射线，判断射线与多边形的交点个数，若为奇数个，则该点在多边形内。">
 
 
 
@@ -133,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/03/09/HDOJ-1392-Surround-the-Trees/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/22/HDOJ-1756-Cupid-s-Arrow/"/>
 
 
 
 
 
-  <title> HDOJ-1392 Surround the Trees | zxnm19980609's Blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> HDOJ-1756 Cupid's Arrow | zxnm19980609's Blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -288,7 +288,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/09/HDOJ-1392-Surround-the-Trees/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/22/HDOJ-1756-Cupid-s-Arrow/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="筽邝">
@@ -309,7 +309,7 @@
             
             
               
-                HDOJ-1392 Surround the Trees
+                HDOJ-1756 Cupid's Arrow
               
             
           </h1>
@@ -324,8 +324,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-09T23:24:13+08:00">
-                2017-03-09
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-22T12:37:00+08:00">
+                2017-03-22
               </time>
             
 
@@ -394,11 +394,11 @@
 
       
         <blockquote>
-<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1932" target="_blank" rel="external">链接</a></p>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1756" target="_blank" rel="external">链接</a></p>
 </blockquote>
-<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>在笛卡尔坐标系中有 n 棵树，用一条绳子将所有树全都围起来，求所需绳子长度的最小值。</p>
-<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>凸包的模板题。但是数据有坑点，如果只有两个点，直接输出两点距离即可。<br><a id="more"></a></p>
-<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</div><div class="line"><span class="keyword">class</span> CPoint &#123;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">    LL x,y;</div><div class="line">    CPoint() &#123;&#125;</div><div class="line">    CPoint(LL _x,LL _y):x(_x),y(_y) &#123;&#125;</div><div class="line">    CPoint <span class="keyword">operator</span> - (<span class="keyword">const</span> CPoint &amp;b) <span class="keyword">const</span> &#123;</div><div class="line">        <span class="keyword">return</span> CPoint(x-b.x,y-b.y);</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"><span class="keyword">int</span> n;</div><div class="line">CPoint p[<span class="number">110</span>],ch[<span class="number">110</span>];</div><div class="line"><span class="function">LL <span class="title">Cross</span><span class="params">(<span class="keyword">const</span> CPoint &amp;a,<span class="keyword">const</span> CPoint &amp;b)</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> a.x*b.y-a.y*b.x;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(<span class="keyword">const</span> CPoint &amp;a,<span class="keyword">const</span> CPoint &amp;b)</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> (a.x&lt;b.x ||(a.x==b.x &amp;&amp; a.y&lt;b.y));</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">Andrew</span><span class="params">()</span> </span>&#123;</div><div class="line">    sort(p,p+n,cmp);</div><div class="line">    <span class="keyword">int</span> m=<span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++) &#123;</div><div class="line">        <span class="keyword">while</span> (m&gt;<span class="number">1</span> &amp;&amp; Cross(ch[m<span class="number">-1</span>]-ch[m<span class="number">-2</span>],p[i]-ch[m<span class="number">-2</span>])&lt;<span class="number">0</span>) m--;</div><div class="line">        ch[m++]=p[i];</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">int</span> k=m;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=n<span class="number">-2</span>; i&gt;=<span class="number">0</span>; i--) &#123;</div><div class="line">        <span class="keyword">while</span> (m&gt;k &amp;&amp; Cross(ch[m<span class="number">-1</span>]-ch[m<span class="number">-2</span>],p[i]-ch[m<span class="number">-2</span>])&lt;<span class="number">0</span>) m--;</div><div class="line">        ch[m++]=p[i];</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> m;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">double</span> <span class="title">dis</span><span class="params">(<span class="keyword">const</span> CPoint &amp;a,<span class="keyword">const</span> CPoint &amp;b)</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">sqrt</span>((a.x-b.x)*(a.x-b.x)+(a.y-b.y)*(a.y-b.y));</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">while</span> (~<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n) &amp;&amp; n) &#123;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++)</div><div class="line">            <span class="built_in">scanf</span>(<span class="string">"%lld%lld"</span>,&amp;p[i].x,&amp;p[i].y);</div><div class="line">        <span class="keyword">if</span> (n==<span class="number">2</span>) &#123;</div><div class="line">            <span class="built_in">printf</span>(<span class="string">"%.2f\n"</span>,dis(p[<span class="number">0</span>],p[<span class="number">1</span>]));</div><div class="line">            <span class="keyword">continue</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">int</span> cnt=Andrew();</div><div class="line">        <span class="keyword">double</span> sum=<span class="number">0</span>;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;cnt<span class="number">-1</span>; i++)</div><div class="line">            sum+=dis(ch[i],ch[i+<span class="number">1</span>]);</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%.2f\n"</span>,sum);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>按顺时针方向给出 n 个多边形的顶点。之后给出 m 个点，判断这些是否都在多边形内。</p>
+<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>可以用射线法解决这个问题，首先判断给定的点是否在多边形的边上，若不在，引一条射线，判断射线与多边形的交点个数，若为奇数个，则该点在多边形内。<br><a id="more"></a></p>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">class</span> CPoint &#123;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="keyword">int</span> x,y;</div><div class="line">    CPoint() &#123;&#125;</div><div class="line">    CPoint(<span class="keyword">int</span> _x,<span class="keyword">int</span> _y):x(_x),y(_y) &#123;&#125;</div><div class="line">    CPoint <span class="keyword">operator</span> - (<span class="keyword">const</span> CPoint &amp;b) <span class="keyword">const</span> &#123;</div><div class="line">        <span class="keyword">return</span> CPoint(x-b.x,y-b.y);</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"><span class="keyword">int</span> n,m,cnt,flag;</div><div class="line">CPoint p[<span class="number">110</span>],a,b;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">Cross</span><span class="params">(<span class="keyword">const</span> CPoint &amp;a,<span class="keyword">const</span> CPoint &amp;b)</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> a.x*b.y-a.y*b.x;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">online</span><span class="params">(<span class="keyword">const</span> CPoint &amp;a,<span class="keyword">const</span> CPoint &amp;b,<span class="keyword">const</span> CPoint &amp;c)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (Cross(a-b,c-b)==<span class="number">0</span> &amp;&amp;</div><div class="line">        a.x&gt;=min(b.x,c.x) &amp;&amp; a.x&lt;=max(b.x,c.x) &amp;&amp;</div><div class="line">        a.y&gt;=min(b.y,c.y) &amp;&amp; a.y&lt;=max(b.y,c.y))</div><div class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">    <span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">while</span> (~<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n)) &#123;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++)</div><div class="line">            <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;p[i].x,&amp;p[i].y);</div><div class="line">        p[n]=p[<span class="number">0</span>];</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;m);</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> k=<span class="number">0</span>; k&lt;m; k++) &#123;</div><div class="line">            <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;a.x,&amp;a.y);</div><div class="line">            b.x=<span class="number">-100</span>; b.y=a.y;</div><div class="line">            flag=<span class="number">0</span>; cnt=<span class="number">0</span>;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++) &#123;</div><div class="line">                <span class="keyword">if</span> (online(a,p[i],p[i+<span class="number">1</span>])) &#123;</div><div class="line">                    flag=<span class="number">-1</span>;</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">                &#125;</div><div class="line">                <span class="keyword">if</span> (a.y&gt;min(p[i].y,p[i+<span class="number">1</span>].y) &amp;&amp; a.y&lt;=max(p[i].y,p[i+<span class="number">1</span>].y))</div><div class="line">                    <span class="keyword">if</span> ((<span class="keyword">long</span> <span class="keyword">long</span>)Cross(p[i+<span class="number">1</span>]-p[i],a-p[i])*(<span class="keyword">long</span> <span class="keyword">long</span>)Cross(p[i+<span class="number">1</span>]-p[i],b-p[i])&lt;<span class="number">0</span>)</div><div class="line">                        cnt++;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">if</span> (flag==<span class="number">0</span> &amp;&amp; (cnt&amp;<span class="number">1</span>)) flag=<span class="number">1</span>;</div><div class="line">            <span class="keyword">if</span> (flag==<span class="number">1</span>) <span class="built_in">printf</span>(<span class="string">"Yes\n"</span>);</div><div class="line">                <span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"No\n"</span>);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -424,7 +424,7 @@
           
             <a href="/tags/计算几何/" rel="tag"># 计算几何</a>
           
-            <a href="/tags/凸包/" rel="tag"># 凸包</a>
+            <a href="/tags/射线法/" rel="tag"># 射线法</a>
           
         </div>
       
@@ -437,8 +437,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/09/HDOJ-2509-Be-the-Winner/" rel="next" title="HDOJ-2509 Be the Winner">
-                <i class="fa fa-chevron-left"></i> HDOJ-2509 Be the Winner
+              <a href="/2017/03/22/POJ-3255-Roadblocks/" rel="next" title="POJ-3255 Roadblocks">
+                <i class="fa fa-chevron-left"></i> POJ-3255 Roadblocks
               </a>
             
           </div>
@@ -446,10 +446,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/11/POJ-3468-A-Simple-Problem-with-Integers/" rel="prev" title="POJ-3468 A Simple Problem with Integers">
-                POJ-3468 A Simple Problem with Integers <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
