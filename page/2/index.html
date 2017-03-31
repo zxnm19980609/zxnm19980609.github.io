@@ -280,6 +280,165 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/25/HDOJ-5726-GCD/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="筽邝">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zxnm19980609's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/03/25/HDOJ-5726-GCD/" itemprop="url">
+                  HDOJ-5726 GCD
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-25T20:49:29+08:00">
+                2017-03-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/解题报告/" itemprop="url" rel="index">
+                    <span itemprop="name">解题报告</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/解题报告/HDOJ/" itemprop="url" rel="index">
+                    <span itemprop="name">HDOJ</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5726">链接</a></p>
+</blockquote>
+<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>给定一个序列\(a_1…a_n\)，对于每个查询\((l,r)\)，计算\(gcd(a_l,a_{l+1},\cdots,a_r)\)的值，并计算有多少对\((l’,r’)\)使得\(gcd(a_{l’},a_{l’+1},\cdots,a_{r’})==gcd(a_l,a_{l+1},\cdots,a_r)\)</p>
+<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>第一问询问区间 gcd 我们可以用 ST表 来做，\(st[i][j]\)表示区间\([i,i+2^j-1]\)的\(gcd\)，所以状态转移方程就是 \(st[i][j]=gcd(st[i][j-1],st[i-2^{j-1}][j-1])\)初始状态为\(st[i][0]=a[i]\)。查询区间\([l,r]\)就可以拆分为两个小区间：\(st[l][k]\)和\(st[r-2^k+1][k]\)，其中\(k=\left \lfloor \log_{2}(r-l+1) \right \rfloor\)。输出\(gcd(st[l][k],st[r-2^k+1][k])\)即可。<br>第二问我们可以枚举左端点 i 从 1 到 n ，对每个 i ，二分右端点，计算每种gcd值的数量，因为如果左端点固定，gcd值随着右端点的右移，呈现单调不增，而且 gcd 值每次变化，至少除以2，所以gcd的数量为\(n \log_{2}n\)种，可以开 map&lt;int,long long&gt; 存每种gcd值的数量，注意 n 大小为 1e5 ，所以数量有可能爆int。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/25/HDOJ-5726-GCD/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/24/A-Contest/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -537,169 +696,10 @@
 <p><a href="https://vjudge.net/problem/HYSBZ-3211">链接</a></p>
 </blockquote>
 <h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>给定一列数 \(A_1…A_n\) ，支持两种操作：<br>1 l r 询问区间 \([l,r]\) 的区间和。<br>2 l r 修改满足 \(l \leq i \leq r\) 的 \(A_i\) 为 \(\left \lfloor \sqrt{A_i} \right \rfloor\)</p>
-<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>区间查询+区间修改，很容易想到是线段树。如果一个数是 0 或者 1 的话，那开方之后还是它本身，所以我们就可以不开方这个数了，加一个 tag 表示这段区间是否全是 0 或 1. 如果 tag 为  true 的话，我们就直接 return ，而其他的大于 1 的数暴力开方即可。<br>
+<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>区间查询+区间修改，很容易想到是线段树。如果一个数是 0 或者 1 的话，那开方之后还是它本身，所以我们就可以不开方这个数了，加一个 tag 表示这段区间是否全是 0 或 1. 如果 tag 为 true 的话，我们就直接 return ，而其他的大于 1 的数暴力开方即可。<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/03/24/BZOJ-3211/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/23/HDOJ-5723-Abandoned-country/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="筽邝">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zxnm19980609's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/23/HDOJ-5723-Abandoned-country/" itemprop="url">
-                  HDOJ-5723 Abandoned country
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-23T22:02:26+08:00">
-                2017-03-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/解题报告/" itemprop="url" rel="index">
-                    <span itemprop="name">解题报告</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/解题报告/HDOJ/" itemprop="url" rel="index">
-                    <span itemprop="name">HDOJ</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5723">链接</a></p>
-</blockquote>
-<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>一个国家有 n 个村庄，标号为 1 到 n 。这个国家有 m 条道路，每条道路长度为 \(w_i\) 。现要重修其中部分道路，要求重修后的道路可以让每个村庄直接或者间接的联通。求修路的最小花费。还有一个人任意选择了两个村庄，求整个人所走的道路长度的期望。</p>
-<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>第一问就是最小生成树(MST)，顺便记录下那些边在最小生成树上。第二问可以枚举每一条在 MST 上的边，该条边的边权记为 w ，统计这条边两边的点的个数（假设分别为 n1, n2, 且 n1+n2==n），对 n1<em>n2</em>w 进行求和，记结果为 sum 。最终期望即为<br>$$<br>\frac{sum}{\frac{n*(n-1)}{2}}<br>$$<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/03/23/HDOJ-5723-Abandoned-country/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -782,7 +782,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">19</span>
+                <span class="site-state-item-count">20</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -804,7 +804,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-count">22</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

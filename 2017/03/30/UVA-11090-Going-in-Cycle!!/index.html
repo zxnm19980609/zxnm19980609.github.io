@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="图论,次短路," />
+  <meta name="keywords" content="负权回路,二分答案," />
 
 
 
@@ -89,23 +89,23 @@
 
 <meta name="description" content="链接
 
-题意给定 n 个点和 m 条边，求 1 到 n 的次短路。
-分析我们可以用　SPFA　求出 1 到其他点的最短路（记为dis[0][i]，然后再求出 n 到其他的点的最短路(记为dis[1][i])。之后枚举每条边（len表示这条边的长度），tmp=dis[0][s]+dis[1][t]+len，找到其中比最短路长但比其他路短的就是次短路。">
+题意有一张带权有向图，有 n 个点，m 条边。如果无环则输出 “No cycle found.” 否则求一个最小的环平均权值。（环平均权值=环上边权值之和/环上边的数量）
+分析$$Cycle_k’s~Minimum~Mean=\frac{\sum_{i=1}^n E_i\left [ i~is~an~Edge~in~Cycle_k \right ]}{\sum_{i=1}^n 1\lef">
 <meta property="og:type" content="article">
-<meta property="og:title" content="POJ-3255 Roadblocks">
-<meta property="og:url" content="http://yoursite.com/2017/03/22/POJ-3255-Roadblocks/index.html">
+<meta property="og:title" content="UVA-11090 Going in Cycle!!">
+<meta property="og:url" content="http://yoursite.com/2017/03/30/UVA-11090-Going-in-Cycle!!/index.html">
 <meta property="og:site_name" content="zxnm19980609's Blog">
 <meta property="og:description" content="链接
 
-题意给定 n 个点和 m 条边，求 1 到 n 的次短路。
-分析我们可以用　SPFA　求出 1 到其他点的最短路（记为dis[0][i]，然后再求出 n 到其他的点的最短路(记为dis[1][i])。之后枚举每条边（len表示这条边的长度），tmp=dis[0][s]+dis[1][t]+len，找到其中比最短路长但比其他路短的就是次短路。">
-<meta property="og:updated_time" content="2017-03-21T23:53:00.699Z">
+题意有一张带权有向图，有 n 个点，m 条边。如果无环则输出 “No cycle found.” 否则求一个最小的环平均权值。（环平均权值=环上边权值之和/环上边的数量）
+分析$$Cycle_k’s~Minimum~Mean=\frac{\sum_{i=1}^n E_i\left [ i~is~an~Edge~in~Cycle_k \right ]}{\sum_{i=1}^n 1\lef">
+<meta property="og:updated_time" content="2017-03-31T03:00:03.509Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="POJ-3255 Roadblocks">
+<meta name="twitter:title" content="UVA-11090 Going in Cycle!!">
 <meta name="twitter:description" content="链接
 
-题意给定 n 个点和 m 条边，求 1 到 n 的次短路。
-分析我们可以用　SPFA　求出 1 到其他点的最短路（记为dis[0][i]，然后再求出 n 到其他的点的最短路(记为dis[1][i])。之后枚举每条边（len表示这条边的长度），tmp=dis[0][s]+dis[1][t]+len，找到其中比最短路长但比其他路短的就是次短路。">
+题意有一张带权有向图，有 n 个点，m 条边。如果无环则输出 “No cycle found.” 否则求一个最小的环平均权值。（环平均权值=环上边权值之和/环上边的数量）
+分析$$Cycle_k’s~Minimum~Mean=\frac{\sum_{i=1}^n E_i\left [ i~is~an~Edge~in~Cycle_k \right ]}{\sum_{i=1}^n 1\lef">
 
 
 
@@ -133,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/03/22/POJ-3255-Roadblocks/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/30/UVA-11090-Going-in-Cycle!!/"/>
 
 
 
 
 
-  <title> POJ-3255 Roadblocks | zxnm19980609's Blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title> UVA-11090 Going in Cycle!! | zxnm19980609's Blog </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -288,7 +288,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/22/POJ-3255-Roadblocks/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/30/UVA-11090-Going-in-Cycle!!/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="筽邝">
@@ -309,7 +309,7 @@
             
             
               
-                POJ-3255 Roadblocks
+                UVA-11090 Going in Cycle!!
               
             
           </h1>
@@ -324,8 +324,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-22T07:44:21+08:00">
-                2017-03-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-30T08:11:54+08:00">
+                2017-03-30
               </time>
             
 
@@ -358,8 +358,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/解题报告/POJ/" itemprop="url" rel="index">
-                    <span itemprop="name">POJ</span>
+                  <a href="/categories/解题报告/UVA/" itemprop="url" rel="index">
+                    <span itemprop="name">UVA</span>
                   </a>
                 </span>
 
@@ -394,11 +394,11 @@
 
       
         <blockquote>
-<p><a href="https://vjudge.net/problem/POJ-3255" target="_blank" rel="external">链接</a></p>
+<p><a href="https://vjudge.net/problem/UVA-11090" target="_blank" rel="external">链接</a></p>
 </blockquote>
-<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>给定 n 个点和 m 条边，求 1 到 n 的次短路。</p>
-<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>我们可以用　SPFA　求出 1 到其他点的最短路（记为dis[0][i]，然后再求出 n 到其他的点的最短路(记为dis[1][i])。之后枚举每条边<s,t>（len<s,t>表示这条边的长度），tmp=dis[0][s]+dis[1][t]+len<s,t>，找到其中比最短路长但比其他路短的就是次短路。<br><a id="more"></a></s,t></s,t></s,t></p>
-<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> INF=<span class="number">0x3F3F3F3F</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAXN=<span class="number">5010</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAXM=<span class="number">100010</span>;</div><div class="line"><span class="keyword">class</span> CNode &#123;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="keyword">int</span> x,w,next;</div><div class="line">&#125;;</div><div class="line"><span class="keyword">int</span> n,m,len=<span class="number">0</span>;</div><div class="line"><span class="keyword">int</span> h[MAXN],dis[<span class="number">2</span>][MAXN];</div><div class="line"><span class="keyword">bool</span> vis[MAXN];</div><div class="line">CNode table[MAXM&lt;&lt;<span class="number">1</span>];</div><div class="line"><span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt; Q;</div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> u,<span class="keyword">int</span> v,<span class="keyword">int</span> w)</span> </span>&#123;</div><div class="line">    len++;</div><div class="line">    table[len].x=v; table[len].w=w;</div><div class="line">    table[len].next=h[u]; h[u]=len;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> u,v,w;</div><div class="line">    <span class="built_in">memset</span>(h,<span class="number">0</span>,<span class="keyword">sizeof</span>(h));</div><div class="line">    <span class="built_in">memset</span>(dis,<span class="number">0x3F</span>,<span class="keyword">sizeof</span>(dis));</div><div class="line">    len=<span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;m; i++) &#123;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;u,&amp;v,&amp;w);</div><div class="line">        add(u,v,w);</div><div class="line">        add(v,u,w);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">spfa</span><span class="params">(<span class="keyword">int</span> k,<span class="keyword">int</span> s,<span class="keyword">int</span> t)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> p;</div><div class="line">    <span class="built_in">memset</span>(vis,<span class="number">0</span>,<span class="keyword">sizeof</span>(vis));</div><div class="line">    <span class="keyword">while</span> (!Q.empty()) Q.pop();</div><div class="line">    Q.push(s); dis[k][s]=<span class="number">0</span>; vis[s]=<span class="literal">true</span>;</div><div class="line">    <span class="keyword">while</span> (!Q.empty()) &#123;</div><div class="line">        p=Q.front(); Q.pop(); vis[p]=<span class="literal">false</span>;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=h[p]; i; i=table[i].next)</div><div class="line">        <span class="keyword">if</span> (dis[k][table[i].x]&gt;dis[k][p]+table[i].w) &#123;</div><div class="line">            dis[k][table[i].x]=dis[k][p]+table[i].w;</div><div class="line">            <span class="keyword">if</span> (!vis[table[i].x]) &#123;</div><div class="line">                vis[table[i].x]=<span class="literal">true</span>;</div><div class="line">                Q.push(table[i].x);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span> </span>&#123;</div><div class="line">    init();</div><div class="line">    spfa(<span class="number">0</span>,<span class="number">1</span>,n);</div><div class="line">    spfa(<span class="number">1</span>,n,<span class="number">1</span>);</div><div class="line">    <span class="keyword">int</span> lim=dis[<span class="number">0</span>][n],ans=INF,tmp;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n; i++)</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> p=h[i]; p; p=table[p].next) &#123;</div><div class="line">        tmp=dis[<span class="number">0</span>][i]+dis[<span class="number">1</span>][table[p].x]+table[p].w;</div><div class="line">        <span class="keyword">if</span> (tmp&gt;lim &amp;&amp; tmp&lt;ans) ans=tmp;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="comment">//freopen("in.txt","r",stdin);</span></div><div class="line">    <span class="keyword">while</span> (~<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m)) solve();</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>有一张带权有向图，有 n 个点，m 条边。如果无环则输出 “No cycle found.” 否则求一个最小的环平均权值。（环平均权值=环上边权值之和/环上边的数量）</p>
+<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>$$<br>Cycle_k’s~Minimum~Mean=\frac{\sum_{i=1}^n E_i\left [ i~is~an~Edge~in~Cycle_k \right ]}{\sum_{i=1}^n 1\left [ i~is~an~Edge~in~Cycle_k \right ]}<br>$$<br>我们把上面等式环上边的数量乘到等式的左边，然后再把等式两边同时减去等式的右边，就变成了这样一个形式：<br>$$<br>\sum_{i=1}^n \left (E_i-Cycle_k’s~Minimum~Mean \right )\left [ i~is~an~Edge~in~Cycle_k \right ] = 0<br>$$<br>所以我们可以二分答案 ans ，将每条边的边权 w 修改为 (w-ans)，用 SPFA 判断是否存在负权回路，若存在则说明有更小的答案，否则反之。<br><a id="more"></a></p>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">55</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxm=maxn*maxn;</div><div class="line"><span class="keyword">const</span> <span class="keyword">double</span> INF=<span class="number">50.0</span>*<span class="number">10000000.0</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">double</span> EPS=<span class="number">1e-8</span>;</div><div class="line"><span class="keyword">class</span> CNode &#123;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="keyword">int</span> x,next;</div><div class="line">    <span class="keyword">double</span> w;</div><div class="line">&#125;;</div><div class="line"><span class="keyword">int</span> n,m;</div><div class="line"><span class="keyword">int</span> len,h[maxm];</div><div class="line">CNode table[maxm];</div><div class="line"><span class="keyword">int</span> cnt[maxn];</div><div class="line"><span class="keyword">double</span> dis[maxn];</div><div class="line"><span class="keyword">double</span> mid,l,r;</div><div class="line"><span class="keyword">bool</span> vis[maxn],Qvis[maxn];</div><div class="line"><span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt; Q;</div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> u,<span class="keyword">int</span> v,<span class="keyword">int</span> w)</span> </span>&#123;</div><div class="line">    len++;</div><div class="line">    table[len].x=v; table[len].w=w;</div><div class="line">    table[len].next=h[u]; h[u]=len;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="title">spfa</span><span class="params">(<span class="keyword">int</span> s,<span class="keyword">double</span> x)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> p;</div><div class="line">    <span class="built_in">memset</span>(cnt,<span class="number">0</span>,<span class="keyword">sizeof</span>(cnt));</div><div class="line">    <span class="built_in">memset</span>(Qvis,<span class="number">0</span>,<span class="keyword">sizeof</span>(Qvis));</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n; i++)</div><div class="line">        dis[i]=INF;</div><div class="line">    <span class="keyword">while</span> (!Q.empty()) Q.pop();</div><div class="line">    Q.push(s); dis[s]=<span class="number">0</span>; vis[s]=<span class="literal">true</span>; Qvis[s]=<span class="literal">true</span>; cnt[s]=<span class="number">1</span>;</div><div class="line">    <span class="keyword">while</span> (!Q.empty()) &#123;</div><div class="line">        p=Q.front(); Q.pop(); Qvis[p]=<span class="literal">false</span>;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=h[p]; i; i=table[i].next) &#123;</div><div class="line">            <span class="keyword">if</span> (dis[table[i].x]&gt;dis[p]+(table[i].w-x)) &#123;</div><div class="line">                dis[table[i].x]=dis[p]+(table[i].w-x);</div><div class="line">                <span class="keyword">if</span> (!Qvis[table[i].x]) &#123;</div><div class="line">                    vis[table[i].x]=<span class="literal">true</span>;</div><div class="line">                    Qvis[table[i].x]=<span class="literal">true</span>;</div><div class="line">                    Q.push(table[i].x);</div><div class="line">                    cnt[table[i].x]++;</div><div class="line">                    <span class="keyword">if</span> (cnt[table[i].x]&gt;n) <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="title">check</span><span class="params">(<span class="keyword">double</span> x)</span> </span>&#123;</div><div class="line">    <span class="built_in">memset</span>(vis,<span class="number">0</span>,<span class="keyword">sizeof</span>(vis));</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>; i&lt;=n; i++)</div><div class="line">        <span class="keyword">if</span> (!vis[i] &amp;&amp; spfa(i,x)) <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">solve</span><span class="params">(<span class="keyword">int</span> tcase)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> u,v,w;</div><div class="line">    len=<span class="number">0</span>;</div><div class="line">    <span class="built_in">memset</span>(h,<span class="number">0</span>,<span class="keyword">sizeof</span>(h));</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"Case #%d: "</span>,tcase);</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;m; i++) &#123;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d%d"</span>,&amp;u,&amp;v,&amp;w);</div><div class="line">        add(u,v,w);</div><div class="line">    &#125;</div><div class="line">    l=<span class="number">0</span>; r=INF;</div><div class="line">    <span class="keyword">while</span> (l&lt;r) &#123;</div><div class="line">        mid=(l+r)/<span class="number">2.0</span>;</div><div class="line">        <span class="keyword">if</span> (check(mid)) r=mid-EPS;</div><div class="line">            <span class="keyword">else</span> l=mid+EPS;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (<span class="built_in">fabs</span>(l-INF)&lt;EPS) <span class="built_in">printf</span>(<span class="string">"No cycle found.\n"</span>);</div><div class="line">        <span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"%.2f\n"</span>,l);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="comment">//freopen("in.txt","r",stdin);</span></div><div class="line">    <span class="keyword">int</span> T;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;T);</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> tcase=<span class="number">1</span>; tcase&lt;=T; tcase++)</div><div class="line">        solve(tcase);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -422,9 +422,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/图论/" rel="tag"># 图论</a>
+            <a href="/tags/负权回路/" rel="tag"># 负权回路</a>
           
-            <a href="/tags/次短路/" rel="tag"># 次短路</a>
+            <a href="/tags/二分答案/" rel="tag"># 二分答案</a>
           
         </div>
       
@@ -437,8 +437,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/20/UVALive-5068-Balloon-Collecting/" rel="next" title="UVALive-5068 Balloon Collecting">
-                <i class="fa fa-chevron-left"></i> UVALive-5068 Balloon Collecting
+              <a href="/2017/03/28/HDOJ-2955-Robberies/" rel="next" title="HDOJ-2955 Robberies">
+                <i class="fa fa-chevron-left"></i> HDOJ-2955 Robberies
               </a>
             
           </div>
@@ -446,10 +446,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/22/HDOJ-1756-Cupid-s-Arrow/" rel="prev" title="HDOJ-1756 Cupid's Arrow">
-                HDOJ-1756 Cupid's Arrow <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
