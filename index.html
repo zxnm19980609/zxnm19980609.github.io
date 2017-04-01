@@ -394,9 +394,9 @@
 </blockquote>
 <h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>给出两种关于防御站位置的信息，一种是确切的信息 P A B X ，表示 A 在 B 的北面 X 距离的地方，另一种是 V A B ，表示只知道 A 在 B 的北面。问这些信息是否存在矛盾。</p>
 <h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>差分约束<br>第一种可以表示为\(A-B \leq X ~ \&amp; \&amp; ~ A-B \geq X\)<br>第二种可以表示为\(A-B \geq 1\)<br>然后都转化为小于等于的不等式，建图，跑一遍 SPFA 求最短路。若存在最短路说明无矛盾，若存在负权回路说明有矛盾。<br>Tips:</p>
-<pre><code>1. 注意建图后有可能不是连通图，所以我们加一个超级源点 S ，将 S 与 1 到 n 每个点都连一条边权为 0 的边，保证图的连通性，然后做 S 的单源最短路判断。
-2. 这题我是玄学 AC 的，G++ 怎么交也不过，换成 C++ 交就 A 了。
-</code></pre>
+<ol>
+<li>注意建图后有可能不是连通图，所以我们加一个超级源点 S ，将 S 与 1 到 n 每个点都连一条边权为 0 的边，保证图的连通性，然后做 S 的单源最短路判断。</li>
+<li>这题我是玄学 AC 的，G++ 怎么交也不过，换成 C++ 交就 A 了。
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/04/01/POJ-2983-Is-the-Information-Reliable/#more" rel="contents">
