@@ -280,7 +280,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/23/HDOJ-5723-Abandoned-country/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/28/HDOJ-1599-find-the-mincost-route/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="筽邝">
@@ -302,8 +302,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/03/23/HDOJ-5723-Abandoned-country/" itemprop="url">
-                  HDOJ-5723 Abandoned country
+                <a class="post-title-link" href="/2017/03/28/HDOJ-1599-find-the-mincost-route/" itemprop="url">
+                  HDOJ-1599 find the mincost route
                 </a>
               
             
@@ -319,8 +319,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-23T22:02:26+08:00">
-                2017-03-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-28T14:58:31+08:00">
+                2017-03-28
               </time>
             
 
@@ -390,13 +390,13 @@
       
         
           <blockquote>
-<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5723">链接</a></p>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1599">链接</a></p>
 </blockquote>
-<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>一个国家有 n 个村庄，标号为 1 到 n 。这个国家有 m 条道路，每条道路长度为 \(w_i\) 。现要重修其中部分道路，要求重修后的道路可以让每个村庄直接或者间接的联通。求修路的最小花费。还有一个人任意选择了两个村庄，求整个人所走的道路长度的期望。</p>
-<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>第一问就是最小生成树(MST)，顺便记录下那些边在最小生成树上。第二问可以枚举每一条在 MST 上的边，该条边的边权记为 w ，统计这条边两边的点的个数（假设分别为 n1, n2, 且 n1+n2==n），对 n1<em>n2</em>w 进行求和，记结果为 sum 。最终期望即为<br>$$<br>\frac{sum}{\frac{n*(n-1)}{2}}<br>$$<br>
+<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>求一个无向图中从 A 点出发最后回到 A 点的路径，包含至少三个点，并且花费最小。</p>
+<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>Floyd 求最小环的模板题，详见代码。<br>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/03/23/HDOJ-5723-Abandoned-country/#more" rel="contents">
+            <a class="btn" href="/2017/03/28/HDOJ-1599-find-the-mincost-route/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -439,7 +439,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/22/HDOJ-1756-Cupid-s-Arrow/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/25/HDOJ-5726-GCD/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="筽邝">
@@ -461,8 +461,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/03/22/HDOJ-1756-Cupid-s-Arrow/" itemprop="url">
-                  HDOJ-1756 Cupid's Arrow
+                <a class="post-title-link" href="/2017/03/25/HDOJ-5726-GCD/" itemprop="url">
+                  HDOJ-5726 GCD
                 </a>
               
             
@@ -478,8 +478,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-22T12:37:00+08:00">
-                2017-03-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-25T20:49:29+08:00">
+                2017-03-25
               </time>
             
 
@@ -549,13 +549,13 @@
       
         
           <blockquote>
-<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1756">链接</a></p>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5726">链接</a></p>
 </blockquote>
-<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>按顺时针方向给出 n 个多边形的顶点。之后给出 m 个点，判断这些是否都在多边形内。</p>
-<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>可以用射线法解决这个问题，首先判断给定的点是否在多边形的边上，若不在，引一条射线，判断射线与多边形的交点个数，若为奇数个，则该点在多边形内。<br>
+<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>给定一个序列\(a_1…a_n\)，对于每个查询\((l,r)\)，计算\(gcd(a_l,a_{l+1},\cdots,a_r)\)的值，并计算有多少对\((l’,r’)\)使得\(gcd(a_{l’},a_{l’+1},\cdots,a_{r’})==gcd(a_l,a_{l+1},\cdots,a_r)\)</p>
+<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>第一问询问区间 gcd 我们可以用 ST表 来做，\(st[i][j]\)表示区间\([i,i+2^j-1]\)的\(gcd\)，所以状态转移方程就是 \(st[i][j]=gcd(st[i][j-1],st[i-2^{j-1}][j-1])\)初始状态为\(st[i][0]=a[i]\)。查询区间\([l,r]\)就可以拆分为两个小区间：\(st[l][k]\)和\(st[r-2^k+1][k]\)，其中\(k=\left \lfloor \log_{2}(r-l+1) \right \rfloor\)。输出\(gcd(st[l][k],st[r-2^k+1][k])\)即可。<br>第二问我们可以枚举左端点 i 从 1 到 n ，对每个 i ，二分右端点，计算每种gcd值的数量，因为如果左端点固定，gcd值随着右端点的右移，呈现单调不增，而且 gcd 值每次变化，至少除以2，所以gcd的数量为\(n \log_{2}n\)种，可以开 map&lt;int,long long&gt; 存每种gcd值的数量，注意 n 大小为 1e5 ，所以数量有可能爆int。<br>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/03/22/HDOJ-1756-Cupid-s-Arrow/#more" rel="contents">
+            <a class="btn" href="/2017/03/25/HDOJ-5726-GCD/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -598,7 +598,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/22/POJ-3255-Roadblocks/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/24/A-Contest/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="筽邝">
@@ -620,8 +620,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/03/22/POJ-3255-Roadblocks/" itemprop="url">
-                  POJ-3255 Roadblocks
+                <a class="post-title-link" href="/2017/03/24/A-Contest/" itemprop="url">
+                  A Contest
                 </a>
               
             
@@ -637,8 +637,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-22T07:44:21+08:00">
-                2017-03-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-24T21:47:53+08:00">
+                2017-03-24
               </time>
             
 
@@ -660,19 +660,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/解题报告/" itemprop="url" rel="index">
-                    <span itemprop="name">解题报告</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/解题报告/POJ/" itemprop="url" rel="index">
-                    <span itemprop="name">POJ</span>
+                  <a href="/categories/生活/" itemprop="url" rel="index">
+                    <span itemprop="name">生活</span>
                   </a>
                 </span>
 
@@ -707,14 +696,10 @@
 
       
         
-          <blockquote>
-<p><a href="https://vjudge.net/problem/POJ-3255">链接</a></p>
-</blockquote>
-<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>给定 n 个点和 m 条边，求 1 到 n 的次短路。</p>
-<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>我们可以用　SPFA　求出 1 到其他点的最短路（记为dis[0][i]，然后再求出 n 到其他的点的最短路(记为dis[1][i])。之后枚举每条边<s,t>（len<s,t>表示这条边的长度），tmp=dis[0][s]+dis[1][t]+len<s,t>，找到其中比最短路长但比其他路短的就是次短路。<br>
+          <p><strong> 记一次欢乐水友赛的经历 </strong><br>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/03/22/POJ-3255-Roadblocks/#more" rel="contents">
+            <a class="btn" href="/2017/03/24/A-Contest/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -752,7 +737,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -797,7 +782,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-count">27</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -819,7 +804,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-count">27</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

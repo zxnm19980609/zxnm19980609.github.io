@@ -280,7 +280,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/11/POJ-3468-A-Simple-Problem-with-Integers/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/17/UVA-10870-Recurrences/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="筽邝">
@@ -302,8 +302,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/03/11/POJ-3468-A-Simple-Problem-with-Integers/" itemprop="url">
-                  POJ-3468 A Simple Problem with Integers
+                <a class="post-title-link" href="/2017/03/17/UVA-10870-Recurrences/" itemprop="url">
+                  UVA-10870 Recurrences
                 </a>
               
             
@@ -319,7 +319,325 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-11T07:22:20+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-17T23:21:30+08:00">
+                2017-03-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/解题报告/" itemprop="url" rel="index">
+                    <span itemprop="name">解题报告</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/解题报告/UVA/" itemprop="url" rel="index">
+                    <span itemprop="name">UVA</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p><a href="https://vjudge.net/problem/UVA-10870">链接</a></p>
+</blockquote>
+<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>\(f(x)=a_1*f(n-1)+a_2*f(n-2)+…+a_d*f(n-d),n&gt;d\)<br>计算\(f(n) \bmod m\)的值。</p>
+<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>简单的矩阵快速幂。<br>$$<br>\begin{bmatrix}<br>f(d) &amp; f(d-1) &amp; \cdots\ &amp; f(1)<br>\end{bmatrix}<br>*<br>\begin{bmatrix}<br>a_1 &amp; 0 &amp; 0 &amp; \cdots\ &amp; 0 \\<br>a_2 &amp; 1 &amp; 0 &amp; \cdots\ &amp; 0 \\<br>a_3 &amp; 0 &amp; 1 &amp; \cdots\ &amp; 0 \\<br>\vdots\ &amp; \vdots\ &amp; \vdots\ &amp; \ddots\ &amp; \vdots\ \\<br>a_{d-1} &amp; 0 &amp; 0 &amp; \cdots\ &amp; 1 \\<br>a_d &amp; 0 &amp; 0 &amp; \cdots\ &amp; 0 \\<br>\end{bmatrix}^{(n-d)}<br>=<br>\begin{bmatrix}<br>f(n) &amp; f(n-1) &amp; \cdots\ &amp; f(n-d+1)<br>\end{bmatrix}<br>$$<br>Tips:<br>①输入的时候就要取模，不然会爆 int 。<br>② \(n-d \leq 0\) 的时候直接输出。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/17/UVA-10870-Recurrences/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/17/HDOJ-4267-A-Simple-Problem-with-Integers/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="筽邝">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zxnm19980609's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/03/17/HDOJ-4267-A-Simple-Problem-with-Integers/" itemprop="url">
+                  HDOJ-4267 A Simple Problem with Integers
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-17T11:25:53+08:00">
+                2017-03-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/解题报告/" itemprop="url" rel="index">
+                    <span itemprop="name">解题报告</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/解题报告/HDOJ/" itemprop="url" rel="index">
+                    <span itemprop="name">HDOJ</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=4267">链接</a></p>
+</blockquote>
+<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>给定 n 个数， \(A_1,A_2,…,A_n\) ，支持以下两种操作。<br>1 a b k c 表示对于满足 \(a \leq i \leq b\) 且 \((i-a) \bmod k == 0\) 的 \(A_i\) 加上 c<br>2 a 查询 \(A_a\) 的值</p>
+<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>这个题目看上去就很像是线段树的题目，也确实个线段树。但是不同的是，这个题目不是区间修改，而是修改离散的点。看网上有 dalao 分了55种情况，并没有看懂。<br>我的做法是，线段树每个节点的 lazy_tag 按 k 分11种情况，然后问题就是如何进行 pushdown 操作？<br>我比较菜，没有想明白怎么 pushdown ，但是因为是单点查询，所以我们不进行 pushdown ，只将每次 update 的时候修改的区间的 lazy_tag 修改。然后 query 的时候自底向上统计每一层的 lazy_tag 。<br>需要注意的是 update 中修改右半区间的操作，详见代码。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/17/HDOJ-4267-A-Simple-Problem-with-Integers/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/11/HDOJ-1348-Wall/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="筽邝">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zxnm19980609's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/03/11/HDOJ-1348-Wall/" itemprop="url">
+                  HDOJ-1348 Wall
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-11T15:59:48+08:00">
                 2017-03-11
               </time>
             
@@ -353,165 +671,6 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/解题报告/POJ/" itemprop="url" rel="index">
-                    <span itemprop="name">POJ</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<p><a href="https://vjudge.net/problem/POJ-3468">链接</a></p>
-</blockquote>
-<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>给定 n 个数， \(A_1,A_2,…,A_n\) ，支持以下两种操作。<br>Q a b 表示查询 \([a,b]\) 的区间和<br>C a b c 表示将 \([a,b]\) 中每个数加 c</p>
-<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>区间操作+区间查询，线段树+lazy_tag的模板题。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/03/11/POJ-3468-A-Simple-Problem-with-Integers/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/09/HDOJ-1392-Surround-the-Trees/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="筽邝">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zxnm19980609's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/09/HDOJ-1392-Surround-the-Trees/" itemprop="url">
-                  HDOJ-1392 Surround the Trees
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-09T23:24:13+08:00">
-                2017-03-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/解题报告/" itemprop="url" rel="index">
-                    <span itemprop="name">解题报告</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/解题报告/HDOJ/" itemprop="url" rel="index">
                     <span itemprop="name">HDOJ</span>
                   </a>
@@ -549,172 +708,13 @@
       
         
           <blockquote>
-<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1932">链接</a></p>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1348">链接</a></p>
 </blockquote>
-<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>在笛卡尔坐标系中有 n 棵树，用一条绳子将所有树全都围起来，求所需绳子长度的最小值。</p>
-<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>凸包的模板题。但是数据有坑点，如果只有两个点，直接输出两点距离即可。<br>
+<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>在笛卡尔坐标系中，国王的城堡是多边形，要建一个围墙，要求围墙距离城堡至少为 L ，求围墙的最小长度。</p>
+<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>首先我们要先求出 n 个点的凸包，然后外围城墙就是与凸包距离为 L 的外圈长度，画图可以看出最后所求周长等于凸包周长+半径为 L 的圆的周长。<br>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/03/09/HDOJ-1392-Surround-the-Trees/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/09/HDOJ-2509-Be-the-Winner/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="筽邝">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zxnm19980609's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/09/HDOJ-2509-Be-the-Winner/" itemprop="url">
-                  HDOJ-2509 Be the Winner
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-09T22:59:42+08:00">
-                2017-03-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/解题报告/" itemprop="url" rel="index">
-                    <span itemprop="name">解题报告</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/解题报告/HDOJ/" itemprop="url" rel="index">
-                    <span itemprop="name">HDOJ</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=">链接</a></p>
-</blockquote>
-<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>n 堆石子，一次可以在一堆中取任意数量，但不可以不取，最后一个取完的人输。</p>
-<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>Nim 博弈的变形。n 堆全是1的时候，特殊判断，奇数必输，偶数必赢。其它情况按照 Nim 博弈做即可。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/03/09/HDOJ-2509-Be-the-Winner/#more" rel="contents">
+            <a class="btn" href="/2017/03/11/HDOJ-1348-Wall/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -752,7 +752,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/6/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/8/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/6/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/8/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -797,7 +797,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-count">27</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -819,7 +819,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-count">27</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
