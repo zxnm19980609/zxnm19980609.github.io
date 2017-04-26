@@ -280,6 +280,165 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/23/HDOJ-5723-Abandoned-country/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="筽邝">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zxnm19980609's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/03/23/HDOJ-5723-Abandoned-country/" itemprop="url">
+                  HDOJ-5723 Abandoned country
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-23T22:02:26+08:00">
+                2017-03-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/解题报告/" itemprop="url" rel="index">
+                    <span itemprop="name">解题报告</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/解题报告/HDOJ/" itemprop="url" rel="index">
+                    <span itemprop="name">HDOJ</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5723">链接</a></p>
+</blockquote>
+<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>一个国家有 n 个村庄，标号为 1 到 n 。这个国家有 m 条道路，每条道路长度为 \(w_i\) 。现要重修其中部分道路，要求重修后的道路可以让每个村庄直接或者间接的联通。求修路的最小花费。还有一个人任意选择了两个村庄，求整个人所走的道路长度的期望。</p>
+<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>第一问就是最小生成树(MST)，顺便记录下那些边在最小生成树上。第二问可以枚举每一条在 MST 上的边，该条边的边权记为 w ，统计这条边两边的点的个数（假设分别为 n1, n2, 且 n1+n2==n），对 n1<em>n2</em>w 进行求和，记结果为 sum 。最终期望即为<br>$$<br>\frac{sum}{\frac{n*(n-1)}{2}}<br>$$<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/23/HDOJ-5723-Abandoned-country/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/22/HDOJ-1756-Cupid-s-Arrow/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -589,176 +748,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/20/UVALive-5068-Balloon-Collecting/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="筽邝">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zxnm19980609's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/20/UVALive-5068-Balloon-Collecting/" itemprop="url">
-                  UVALive-5068 Balloon Collecting
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-20T17:16:12+08:00">
-                2017-03-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/解题报告/" itemprop="url" rel="index">
-                    <span itemprop="name">解题报告</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/解题报告/UVALive/" itemprop="url" rel="index">
-                    <span itemprop="name">UVALive</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<p><a href="https://vjudge.net/problem/UVALive-5068">链接</a></p>
-</blockquote>
-<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>有一辆小车，开始位于 House （坐标为 0 ），共有 n 个气球，第 i 个气球会在 \(t_i\) 的时候落在坐标为 \(p_i\) 的地方。当你的车上有 k 个气球的时候，你需要 k+1 个单位时间移动 1 个单位距离。小车最多装 3 个气球，当小车上有 3 个气球的时候必须回 House 将所有气球放下。当然，你也可以选择在小车上不足 3 个气球的时候回 House 放下车上的气球。<br>小车，House和气球足够小，它们的体积可以忽略不计，小车接气球和在 House 放下气球的时间可以忽略不计。小车在任意时刻可以向左走，向右走，或者停在原地等待气球。<br>判断小车能否接到全部气球，如果可以，输出小车行走的总距离。如果不能，则输出小车接不到第几个气球。</p>
-<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>定义状态 dp[i][k] 表示在装下了第 i 个气球后小车中剩下 k 个气球，分类讨论：</p>
-<ol>
-<li>k==1：在装完第 i-1 个气球之后，必然是回到了 House 中放下了小车中的所有气球，那么可分为如下三种情况，若下面三种情况均不存在，那么 dp[i][1] 这个状态不可达。<ul>
-<li>如果 dp[i-1][1] 这个状态可达，并且时间允许，可以用 dp[i-1][1]+a[i].pos+a[i-1].pos 来更新 dp[i][1]</li>
-<li>如果 dp[i-1][2] 这个状态可达，并且时间允许，可以用 dp[i-1][2]+a[i].pos+a[i-1].pos 来更新 dp[i][1]</li>
-<li>如果 dp[i-1][3] 这个状态可达，并且时间允许，可以用 dp[i-1][3]+a[i].pos+a[i-1].pos 来更新 dp[i][1]</li>
-</ul>
-</li>
-<li>k==2：在装完第 i-1 个气球之后，小车中必然还剩 1 个气球，并且不能回到 House 中放气球，那么如果 dp[i-1][1] 这个状态可达，并且时间允许，则  dp[i][2]=dp[i-1][1]+abs(a[i].pos-a[i-1].pos)。如果不存在，那么 dp[i][2] 这个状态不可达。</li>
-<li>k==3：在装完第 i-1 个气球之后，小车中必然还剩 2 个气球，并且不能回到 House 中放气球，那么如果 dp[i-1][2] 这个状态可达，并且时间允许，则 dp[i][3]=dp[i-1][2]+abs(a[i].pos-a[i-1].pos) 如果不存在，那么  dp[i][3] 这个状态不可达。</li>
-</ol>
-<p>最后判断 dp[i][1]、dp[i][2] 和 dp[i][3] 中哪些状态是可达的，如果都不可达，说明第 i 个气球接不到，输出即可。如果最终能接到全部气球，找出最小的 dp[n-1][k] 再加上 a[n-1].pos 输出即可。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/03/20/UVALive-5068-Balloon-Collecting/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -808,7 +797,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">28</span>
+                <span class="site-state-item-count">29</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -830,7 +819,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">29</span>
+                <span class="site-state-item-count">30</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
