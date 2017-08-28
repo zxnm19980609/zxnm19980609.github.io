@@ -280,6 +280,165 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/28/HDOJ-5618-Jam-s-problem-again/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="筽邝">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zxnm19980609's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/08/28/HDOJ-5618-Jam-s-problem-again/" itemprop="url">
+                  HDOJ-5618 Jam's problem again
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-28T22:49:04+08:00">
+                2017-08-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/解题报告/" itemprop="url" rel="index">
+                    <span itemprop="name">解题报告</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/解题报告/HDOJ/" itemprop="url" rel="index">
+                    <span itemprop="name">HDOJ</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5618">链接</a></p>
+</blockquote>
+<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>给定 \(n\) 个坐标 \((x_i,y_i,z_i)\) ，求对于坐标 \((x_i,y_i,z_i)\) 满足 \(x_j \leq x_i~\&amp;\&amp;~y_j \leq y_i~\&amp;\&amp;~z_j \leq z_i \) 的 \(j\) 的个数。</p>
+<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p><a href="http://www.cnblogs.com/mlystdcall/p/6219421.html">mlystdcall</a><br>首先简单介绍一下CDQ分治，我也是看这这位dalao的博客学习的。<br>CDQ分治，主要是先进行二分，然后通过 \( (L, Mid) \) 更新 \( (Mid + 1, R) \) 的答案，即用左边的子问题帮助解决右边的子问题。<br>这是一个典型的三维偏序问题，可行的解法有很多，我是用了第一维排序，第二维CDQ分治，第三维树状数组维护的方法。<br>三维偏序问题是基于一维二维偏序问题的，具体详细的内容可以参考<a href="http://www.cnblogs.com/mlystdcall/p/6219421.html">mlystdcall</a>这篇博客，这里简单讲一下思路和一些需要注意的地方。<br>首先我们按照 \( x \) 排序，这样我们就可以消除 \( x \) 对于答案的影响。<br>对于第二维我们考虑用CDQ分治解决，考虑归并排序的过程，我们在CDQ的同时进行归并排序，就可以保证 \( y \) 的有序性，同时可以用树状数组维护第三维 \( z \) ，具体实现就是用两个指针 \( i, j \) 分别扫描区间 \( (L, Mid) \) 和 \( (Mid + 1, R) \)，如果 \( a[i].y \leq a[j].y \) 我们就把 \( a[i].z \) 插入树状数组，如果 \( a[i].y &gt; a[j].y \)，说明在左区间中比当前的 \( a[j].y \) 小的数已经没有了，即左区间有可能对 \( a[j] \) 产生贡献的点已经全部插入树状数组了，我们只需要统计树状数组中小于等于 \( a[j].z \) 的数即可。<br>重复这个过程就能求得全部点的答案了。<br>P.S.<br>注意每次归并操作之前都要清空树状数组，但是 memset 会 TLE，所以我是插入操作完成之后再插入一遍 -1 完成初始化。<br>CDQ分治只处理了排序后这个点左边的点对于答案的影响，所以如果有重合点的话，会少算一些答案，具体就是在进行CDQ分治之前处理出来相同点右侧对于这个点答案的影响。<br>注意是 \( a[i].y \leq a[j].y \) 进行插入操作，在这一个地方 WA 的生活不能自理。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/28/HDOJ-5618-Jam-s-problem-again/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/26/HDOJ-3062-Party/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -600,168 +759,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/07/HDOJ-3584-Cube/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="筽邝">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zxnm19980609's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/07/HDOJ-3584-Cube/" itemprop="url">
-                  HDOJ-3584 Cube
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-07T22:55:15+08:00">
-                2017-04-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/解题报告/" itemprop="url" rel="index">
-                    <span itemprop="name">解题报告</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/解题报告/HDOJ/" itemprop="url" rel="index">
-                    <span itemprop="name">HDOJ</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=3584">链接</a></p>
-</blockquote>
-<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>有一 N*N*N 的三维矩阵 A ，只有 0 和 1 两种取值，开始时每个元素都是 0，定义如下两种操作：<br>\(1~x_1~y_1~z_1~x_2~y_2~z_2\)表示将满足\(x_1 \leq i \leq x_2 ~ \&amp;\&amp; ~ y_1 \leq j \leq y_2 ~ \&amp;\&amp; ~ z_1 \leq k \leq z_2\)的\( A_{(i,j,k)}\)取反。<br>\(0~x~y~z\)表示查询现在\(A_{(x,y,z)}\)的值。</p>
-<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>三维树状数组的模板题。<br>关于树状数组，我感觉这两位大牛讲的很好，感谢。</p>
-<blockquote>
-<p><a href="http://lib.csdn.net/article/c/41020">xuzengqiang</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.cnblogs.com/cchun/archive/2011/05/10/2520086.html">cchun</a></p>
-</blockquote>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/04/07/HDOJ-3584-Cube/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -811,7 +808,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">29</span>
+                <span class="site-state-item-count">30</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -833,7 +830,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">30</span>
+                <span class="site-state-item-count">31</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
