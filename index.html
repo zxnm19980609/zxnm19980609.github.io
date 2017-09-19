@@ -280,6 +280,338 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/19/HDOJ-3472-HS-BDC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="筽邝">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zxnm19980609's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/09/19/HDOJ-3472-HS-BDC/" itemprop="url">
+                  HDOJ-3472 HS BDC
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-19T18:14:12+08:00">
+                2017-09-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/解题报告/" itemprop="url" rel="index">
+                    <span itemprop="name">解题报告</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/解题报告/HDOJ/" itemprop="url" rel="index">
+                    <span itemprop="name">HDOJ</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=3472">链接</a></p>
+</blockquote>
+<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>给你 n 个字符串和它们的类型，如果类型是 0 表示字符串不可以反转， 1 则表示可以反转。问是否可以将 n 个字符串首尾相连。</p>
+<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>这是一道混合图求欧拉回路的模板题。</p>
+<ol>
+<li><p>预备知识：</p>
+<blockquote>
+<p>混合图是指既有有向边又有无向边的图。</p>
+<p>欧拉回路是图 G 中的一个回路，经过每条边有且仅有一次，则称该回路为欧拉回路。具有欧拉回路的图称为欧拉图。</p>
+<p>无向图中存在欧拉回路的条件：每个点的度数均为偶数。</p>
+<p>无向图中存在欧拉路径的条件：每个点的度数均为偶数或者有且仅有2个度数为奇数的点。</p>
+<p>有向图中存在欧拉回路的条件：每个点的 入度 == 出度。</p>
+<p>有向图中存在欧拉路径的条件：除了2个点外，其余的点 入度 == 出度，且在这2个点中，一个点的入度比出度大 1，另一个出度比入度大 1。</p>
+</blockquote>
+</li>
+<li><p>求解混合图欧拉回路的一般方法：</p>
+<blockquote>
+<p>随意定向：在混合图中，对于双向边的处理除了拆边之外，还有任意定向。先对全图的双向边进行任意定向，很显然，这样无法直接得到结果。但是通过这一步，至少可以确定这样一件事实，如果一个点的出度加入度一定是奇数的话，那么这个图一定没有欧拉回路。考虑对于一条无向边，无论我们怎么规定它的方向，对这条边连接的顶点的度的影响都是 2，所以随意定向不会对点的度的奇偶性产生影响，从而我们可以通过度的奇偶性判断是否存在欧拉回路。随意定向之后，再使用恰当的调整方法就可以构造出解。</p>
+<p>自调整方法：所谓的自调整方法就是将其中的一些边的方向调整回来，使所有的点的出度等于入度。但是有一条边的方向改变后，会改变一个点的出度的同时改变另一个点的入度，相当于一条边制约着两个点。同时有些点的出度大于入度，我们希望它的某些出边转向；而有些点的入度大于出度，我们希望它的某些入边转向。这两种点虽然需求不同，但是他们之间往往一条边转向就能同时满足二者。</p>
+</blockquote>
+</li>
+<li><p>具体步骤：</p>
+<blockquote>
+<p>对每个点求 \(x = \left | indegree_i - outdegree_i \right | / 2\)，x 表示在随意定向的图中调整 x 条边就能让这个点入度等于出度（因为调整一条边对于这个点的度的影响为 2，所以上式中应除以 2）。</p>
+<p>把图中的点转换为一个二分图，每个点的 x 值就是它们的点权。</p>
+<p>设置源点 S 向所有出度小于于入度的点连边，设置汇点 T，所有入度小于出度的点连边，将各自的点权转换为边权。（出度小于入度的点连向源点还是汇点都可以，只要保证出度小于入度的点和入度小于出度的点分别连向两边即可）</p>
+<p>最后将原图中所有随意定向的无向边加上一个 1 的容量，方向不变，而有向边不能改变方向，无需连边。</p>
+<p>可以发现，从源点 S 出发的一个单位流将会一个“无向边”的容量变为 0，使得两端的点权各自减 1，其实这就是在模拟一次对无向边方向的调整。当把图建好后，依靠最大流性质可以最大可能地无冲突调整边的方向，并最终使得每个点的点容量都达到满流。最后，还要对那些图中出度等于入度的点做适当分析，它们作为一个“中间点”，由于流平衡性质，不会留下任何流量值，对于那些真正需要调整的点不会带来任何影响。</p>
+<p>如何得到答案？检查从源点出发的每条边是否都满流，如果有一条边没有满流，说明有一个点没有调整到入度等于出度，于是整个图不存在欧拉回路。</p>
+</blockquote>
+</li>
+</ol>
+<p>我们把 26 个字母看成点，每个不能反转的单词看做一条有向边，每个能够反转的单词看做一条无向边，这个题目就抽象成要求一个混合图的欧拉路径，我们考虑把它转化为一个求欧拉回路的问题，具体做法如下。<br>首先我们可以用并查集判断图的连通性，如果有点不在同一个连通块中，一定没有欧拉回路。之后我们计算每个点的度（入度 - 出度），如果所有点的度都是偶数，我们就可以直接建图跑最大流判断；否则就只有可能存在一对奇数度的点，其中度小于零的为欧拉路径的终点，度大于零的为欧拉路径的起点，我们连一条从终点到起点的边，容量为 1，再跑最大流判断即可；否则就不存在欧拉回路。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/09/19/HDOJ-3472-HS-BDC/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/19/Templates/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="筽邝">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zxnm19980609's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/09/19/Templates/" itemprop="url">
+                  Templates
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-19T00:21:33+08:00">
+                2017-09-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/模板/" itemprop="url" rel="index">
+                    <span itemprop="name">模板</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>自己整理的模板，仅供参考。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/09/19/Templates/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/19/HDOJ-3414-Tour-Route/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -390,331 +722,13 @@
       
         
           <blockquote>
-<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=">链接</a></p>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=3414">链接</a></p>
 </blockquote>
 <h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>给出一个n阶竞赛图（每对顶点间都有边相连的有向图），找出一个哈密顿回路（经过所有点，且每个点只经过一次），没有就输出-1。</p>
 <h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>竞赛图（n != 2）一定存在哈密顿路径，但回路就不一定了，需要遍历每个点，构建一次哈密尔顿路径，再判断首尾是否相连。构建的方法也比较简单，详见代码。<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/09/19/HDOJ-3414-Tour-Route/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/28/HDOJ-5618-Jam-s-problem-again/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="筽邝">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zxnm19980609's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/08/28/HDOJ-5618-Jam-s-problem-again/" itemprop="url">
-                  HDOJ-5618 Jam's problem again
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-28T22:49:04+08:00">
-                2017-08-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/解题报告/" itemprop="url" rel="index">
-                    <span itemprop="name">解题报告</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/解题报告/HDOJ/" itemprop="url" rel="index">
-                    <span itemprop="name">HDOJ</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5618">链接</a></p>
-</blockquote>
-<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>给定 \(n\) 个坐标 \((x_i,y_i,z_i)\) ，求对于坐标 \((x_i,y_i,z_i)\) 满足 \(x_j \leq x_i~\&amp;\&amp;~y_j \leq y_i~\&amp;\&amp;~z_j \leq z_i \) 的 \(j\) 的个数。</p>
-<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p><a href="http://www.cnblogs.com/mlystdcall/p/6219421.html">mlystdcall</a><br>首先简单介绍一下CDQ分治，我也是看这这位dalao的博客学习的。<br>CDQ分治，主要是先进行二分，然后通过 \( (L, Mid) \) 更新 \( (Mid + 1, R) \) 的答案，即用左边的子问题帮助解决右边的子问题。<br>这是一个典型的三维偏序问题，可行的解法有很多，我是用了第一维排序，第二维CDQ分治，第三维树状数组维护的方法。<br>三维偏序问题是基于一维二维偏序问题的，具体详细的内容可以参考<a href="http://www.cnblogs.com/mlystdcall/p/6219421.html">mlystdcall</a>这篇博客，这里简单讲一下思路和一些需要注意的地方。<br>首先我们按照 \( x \) 排序，这样我们就可以消除 \( x \) 对于答案的影响。<br>对于第二维我们考虑用CDQ分治解决，考虑归并排序的过程，我们在CDQ的同时进行归并排序，就可以保证 \( y \) 的有序性，同时可以用树状数组维护第三维 \( z \) ，具体实现就是用两个指针 \( i, j \) 分别扫描区间 \( (L, Mid) \) 和 \( (Mid + 1, R) \)，如果 \( a[i].y \leq a[j].y \) 我们就把 \( a[i].z \) 插入树状数组，如果 \( a[i].y &gt; a[j].y \)，说明在左区间中比当前的 \( a[j].y \) 小的数已经没有了，即左区间有可能对 \( a[j] \) 产生贡献的点已经全部插入树状数组了，我们只需要统计树状数组中小于等于 \( a[j].z \) 的数即可。<br>重复这个过程就能求得全部点的答案了。<br>P.S.<br>注意每次归并操作之前都要清空树状数组，但是 memset 会 TLE，所以我是插入操作完成之后再插入一遍 -1 完成初始化。<br>CDQ分治只处理了排序后这个点左边的点对于答案的影响，所以如果有重合点的话，会少算一些答案，具体就是在进行CDQ分治之前处理出来相同点右侧对于这个点答案的影响。<br>注意是 \( a[i].y \leq a[j].y \) 进行插入操作，在这一个地方 WA 的生活不能自理。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/08/28/HDOJ-5618-Jam-s-problem-again/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/26/HDOJ-3062-Party/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="筽邝">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zxnm19980609's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/26/HDOJ-3062-Party/" itemprop="url">
-                  HDOJ-3062 Party
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-26T17:30:42+08:00">
-                2017-04-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/解题报告/" itemprop="url" rel="index">
-                    <span itemprop="name">解题报告</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/解题报告/HDOJ/" itemprop="url" rel="index">
-                    <span itemprop="name">HDOJ</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=3062">链接</a></p>
-</blockquote>
-<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>中文题面，不解释。</p>
-<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>2-SAT 模板题。将每个人看做一个点，对于两对夫妻 (a,a’) 和 (b,b’)，如果 a,b 构成矛盾关系，那么选择 a 就必须选择 b’，同样，选择 b 就必须选择 a’，这样我们建立一张有向图，如果存在边 a-&gt;b 则说明选择 a 的同时必须选择 b，Tarjan 跑一下强联通分量，如果一对夫妻属于同一个强联通分量中就是不合法的。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/04/26/HDOJ-3062-Party/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -797,7 +811,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">31</span>
+                <span class="site-state-item-count">33</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -808,7 +822,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -819,7 +833,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">33</span>
+                <span class="site-state-item-count">35</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
