@@ -113,7 +113,7 @@
 欧拉回路是图 G 中的一个回路，经过每条边有且仅有一次，则称该回路为欧拉回路。具有欧拉回路的图称为欧拉图。
 无向图中存在欧拉回路的条件：每个点的度数均为偶数。
 无">
-<meta property="og:updated_time" content="2017-09-19T11:57:58.237Z">
+<meta property="og:updated_time" content="2017-11-07T09:42:33.238Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HDOJ-3472 HS BDC">
 <meta name="twitter:description" content="链接
@@ -438,7 +438,7 @@
 </li>
 <li><p>具体步骤：</p>
 <blockquote>
-<p>对每个点求 \(x = \left | indegree_i - outdegree_i \right | / 2\)，x 表示在随意定向的图中调整 x 条边就能让这个点入度等于出度（因为调整一条边对于这个点的度的影响为 2，所以上式中应除以 2）。</p>
+<p>对每个点求 $x = \left | indegree_i - outdegree_i \right | / 2$，x 表示在随意定向的图中调整 x 条边就能让这个点入度等于出度（因为调整一条边对于这个点的度的影响为 2，所以上式中应除以 2）。</p>
 <p>把图中的点转换为一个二分图，每个点的 x 值就是它们的点权。</p>
 <p>设置源点 S 向所有出度小于于入度的点连边，设置汇点 T，所有入度小于出度的点连边，将各自的点权转换为边权。（出度小于入度的点连向源点还是汇点都可以，只要保证出度小于入度的点和入度小于出度的点分别连向两边即可）</p>
 <p>最后将原图中所有随意定向的无向边加上一个 1 的容量，方向不变，而有向边不能改变方向，无需连边。</p>
@@ -496,6 +496,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/09/25/CodeForces-855A-Tom-Riddle-s-Diary/" rel="prev" title="CodeForces-855A Tom Riddle's Diary">
+                CodeForces-855A Tom Riddle's Diary <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -567,7 +571,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">33</span>
+                <span class="site-state-item-count">34</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -578,7 +582,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -589,7 +593,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">35</span>
+                <span class="site-state-item-count">36</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
