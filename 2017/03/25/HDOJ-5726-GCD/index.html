@@ -87,25 +87,18 @@
 
 
 
-<meta name="description" content="链接
-
-题意给定一个序列\(a_1…a_n\)，对于每个查询\((l,r)\)，计算\(gcd(a_l,a_{l+1},\cdots,a_r)\)的值，并计算有多少对\((l’,r’)\)使得\(gcd(a_{l’},a_{l’+1},\cdots,a_{r’})==gcd(a_l,a_{l+1},\cdots,a_r)\)
-分析第一问询问区间 gcd 我们可以用 ST表 来做，\(st[i][">
+<meta name="description" content="链接  题意给定一个序列$a_1,…,a_n$，对于每个查询$(l,r)$，计算$gcd(a_l,a_{l+1},\cdots,a_r)$的值，并计算有多少对$(l’,r’)$使得$gcd(a_{l’},a_{l’+1},\cdots,a_{r’})==gcd(a_l,a_{l+1},\cdots,a_r)$ 分析第一问询问区间$gcd$我们可以用$ST$表来做，$st[i][j]$表示区间$[">
+<meta name="keywords" content="Sparse Table,二分">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HDOJ-5726 GCD">
 <meta property="og:url" content="http://yoursite.com/2017/03/25/HDOJ-5726-GCD/index.html">
-<meta property="og:site_name" content="zxnm19980609's Blog">
-<meta property="og:description" content="链接
-
-题意给定一个序列\(a_1…a_n\)，对于每个查询\((l,r)\)，计算\(gcd(a_l,a_{l+1},\cdots,a_r)\)的值，并计算有多少对\((l’,r’)\)使得\(gcd(a_{l’},a_{l’+1},\cdots,a_{r’})==gcd(a_l,a_{l+1},\cdots,a_r)\)
-分析第一问询问区间 gcd 我们可以用 ST表 来做，\(st[i][">
-<meta property="og:updated_time" content="2017-08-01T20:08:44.256Z">
+<meta property="og:site_name" content="zxnm19980609&#39;s Blog">
+<meta property="og:description" content="链接  题意给定一个序列$a_1,…,a_n$，对于每个查询$(l,r)$，计算$gcd(a_l,a_{l+1},\cdots,a_r)$的值，并计算有多少对$(l’,r’)$使得$gcd(a_{l’},a_{l’+1},\cdots,a_{r’})==gcd(a_l,a_{l+1},\cdots,a_r)$ 分析第一问询问区间$gcd$我们可以用$ST$表来做，$st[i][j]$表示区间$[">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-11-08T09:34:32.299Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HDOJ-5726 GCD">
-<meta name="twitter:description" content="链接
-
-题意给定一个序列\(a_1…a_n\)，对于每个查询\((l,r)\)，计算\(gcd(a_l,a_{l+1},\cdots,a_r)\)的值，并计算有多少对\((l’,r’)\)使得\(gcd(a_{l’},a_{l’+1},\cdots,a_{r’})==gcd(a_l,a_{l+1},\cdots,a_r)\)
-分析第一问询问区间 gcd 我们可以用 ST表 来做，\(st[i][">
+<meta name="twitter:description" content="链接  题意给定一个序列$a_1,…,a_n$，对于每个查询$(l,r)$，计算$gcd(a_l,a_{l+1},\cdots,a_r)$的值，并计算有多少对$(l’,r’)$使得$gcd(a_{l’},a_{l’+1},\cdots,a_{r’})==gcd(a_l,a_{l+1},\cdots,a_r)$ 分析第一问询问区间$gcd$我们可以用$ST$表来做，$st[i][j]$表示区间$[">
 
 
 
@@ -396,8 +389,8 @@
         <blockquote>
 <p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5726" target="_blank" rel="external">链接</a></p>
 </blockquote>
-<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>给定一个序列\(a_1…a_n\)，对于每个查询\((l,r)\)，计算\(gcd(a_l,a_{l+1},\cdots,a_r)\)的值，并计算有多少对\((l’,r’)\)使得\(gcd(a_{l’},a_{l’+1},\cdots,a_{r’})==gcd(a_l,a_{l+1},\cdots,a_r)\)</p>
-<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>第一问询问区间 gcd 我们可以用 ST表 来做，\(st[i][j]\)表示区间\([i,i+2^j-1]\)的\(gcd\)，所以状态转移方程就是 \(st[i][j]=gcd(st[i][j-1],st[i-2^{j-1}][j-1])\)初始状态为\(st[i][0]=a[i]\)。查询区间\([l,r]\)就可以拆分为两个小区间：\(st[l][k]\)和\(st[r-2^k+1][k]\)，其中\(k=\left \lfloor \log_{2}(r-l+1) \right \rfloor\)。输出\(gcd(st[l][k],st[r-2^k+1][k])\)即可。<br>第二问我们可以枚举左端点 i 从 1 到 n ，对每个 i ，二分右端点，计算每种gcd值的数量，因为如果左端点固定，gcd值随着右端点的右移，呈现单调不增，而且 gcd 值每次变化，至少除以2，所以gcd的数量为\(n \log_{2}n\)种，可以开 map&lt;int,long long&gt; 存每种gcd值的数量，注意 n 大小为 1e5 ，所以数量有可能爆int。<br><a id="more"></a></p>
+<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>给定一个序列$a_1,…,a_n$，对于每个查询$(l,r)$，计算$gcd(a_l,a_{l+1},\cdots,a_r)$的值，并计算有多少对$(l’,r’)$使得$gcd(a_{l’},a_{l’+1},\cdots,a_{r’})==gcd(a_l,a_{l+1},\cdots,a_r)$</p>
+<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>第一问询问区间$gcd$我们可以用$ST$表来做，$st[i][j]$表示区间$[i,i+2^j-1]$的$gcd$，所以状态转移方程就是$st[i][j]=gcd(st[i][j-1],st[i-2^{j-1}][j-1])$初始状态为$st[i][0]=a[i]$。查询区间$[l,r]$就可以拆分为两个小区间：$st[l][k]$和$st[r-2^k+1][k]$，其中$k=\left \lfloor \log_{2}(r-l+1) \right \rfloor$。输出$gcd(st[l][k],st[r-2^k+1][k])$即可。<br>第二问我们可以枚举左端点$i$从$1$到$n$，对每个$i$，二分右端点，计算每种$gcd$值的数量，因为如果左端点固定，$gcd$值随着右端点的右移，呈现单调不增，而且$gcd$值每次变化，至少除以$2$，所以$gcd$的数量为$n \log_{2}n$种，可以开$map&lt;int,~long~long&gt;$存每种$gcd$值的数量，注意$n$大小为$1e5$，所以数量有可能爆$int$。<br><a id="more"></a></p>
 <h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;map&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> MAXN = <span class="number">1e5</span> + <span class="number">10</span>;</div><div class="line"><span class="keyword">int</span> n, m, st[MAXN][<span class="number">20</span>];</div><div class="line"><span class="built_in">map</span>&lt;<span class="keyword">int</span>, <span class="keyword">long</span> <span class="keyword">long</span>&gt; mp;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (b == <span class="number">0</span>) <span class="keyword">return</span> a;</div><div class="line">    <span class="keyword">return</span> gcd(b, a % b);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">query</span><span class="params">(<span class="keyword">int</span> l, <span class="keyword">int</span> r)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> k = (<span class="keyword">int</span>)(<span class="built_in">log</span>(r - l + <span class="number">1</span>) / <span class="built_in">log</span>(<span class="number">2</span>));</div><div class="line">    <span class="keyword">return</span> gcd(st[l][k], st[r - (<span class="number">1</span> &lt;&lt; k) + <span class="number">1</span>][k]);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;st[i][<span class="number">0</span>]);</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; (<span class="number">1</span> &lt;&lt; j) &lt;= n; j++)</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i + (<span class="number">1</span> &lt;&lt; j) - <span class="number">1</span> &lt;= n; i++) st[i][j] = gcd(st[i][j - <span class="number">1</span>], st[i + (<span class="number">1</span> &lt;&lt; (j - <span class="number">1</span>))][j - <span class="number">1</span>]);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span> </span>&#123;</div><div class="line">    mp.clear();</div><div class="line">    <span class="keyword">int</span> l, r, g, mid;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</div><div class="line">        g = st[i][<span class="number">0</span>];</div><div class="line">        <span class="keyword">int</span> j = i;</div><div class="line">        <span class="keyword">while</span> (j &lt;= n) &#123;</div><div class="line">            l = j;</div><div class="line">            r = n;</div><div class="line">            <span class="keyword">while</span> (l &lt; r) &#123;</div><div class="line">                mid = (l + r + <span class="number">1</span>) &gt;&gt; <span class="number">1</span>;</div><div class="line">                <span class="keyword">if</span> (query(i, mid) == g)</div><div class="line">                    l = mid;</div><div class="line">                <span class="keyword">else</span></div><div class="line">                    r = mid - <span class="number">1</span>;</div><div class="line">            &#125;</div><div class="line">            mp[g] += (l - j + <span class="number">1</span>);</div><div class="line">            j = l + <span class="number">1</span>;</div><div class="line">            g = query(i, j);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> T;</div><div class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;T);</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> tcase = <span class="number">1</span>; tcase &lt;= T; tcase++) &#123;</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"Case #%d:\n"</span>, tcase);</div><div class="line">        init();</div><div class="line">        solve();</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;m);</div><div class="line">        <span class="keyword">int</span> l, r, g;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</div><div class="line">            <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;l, &amp;r);</div><div class="line">            g = query(l, r);</div><div class="line">            <span class="built_in">cout</span> &lt;&lt; g &lt;&lt; <span class="string">' '</span> &lt;&lt; mp[g] &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
@@ -521,7 +514,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">34</span>
+                <span class="site-state-item-count">32</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -734,24 +727,7 @@
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-
-<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-<!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
 
 
 
@@ -790,6 +766,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
 
   
 

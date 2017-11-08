@@ -87,25 +87,18 @@
 
 
 
-<meta name="description" content="链接
-
-题意中文题面，不解释。
-分析2-SAT 模板题。将每个人看做一个点，对于两对夫妻 (a,a’) 和 (b,b’)，如果 a,b 构成矛盾关系，那么选择 a 就必须选择 b’，同样，选择 b 就必须选择 a’，这样我们建立一张有向图，如果存在边 a-&amp;gt;b 则说明选择 a 的同时必须选择 b，Tarjan 跑一下强联通分量，如果一对夫妻属于同一个强联通分量中就是不合法的。">
+<meta name="description" content="链接  题意中文题面，不解释。 分析$2-SAT$模板题。将每个人看做一个点，对于两对夫妻$(a,a’)$和$(b,b’)$，如果$a,b$构成矛盾关系，那么选择$a$就必须选择$b’$，同样，选择$b$就必须选择$a’$，这样我们建立一张有向图，如果存在边$a-&amp;gt;b$则说明选择$a$的同时必须选择$b$，$Tarjan$跑一下强联通分量，如果一对夫妻属于同一个强联通分量中就是不合法的。">
+<meta name="keywords" content="2-SAT">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HDOJ-3062 Party">
 <meta property="og:url" content="http://yoursite.com/2017/04/26/HDOJ-3062-Party/index.html">
-<meta property="og:site_name" content="zxnm19980609's Blog">
-<meta property="og:description" content="链接
-
-题意中文题面，不解释。
-分析2-SAT 模板题。将每个人看做一个点，对于两对夫妻 (a,a’) 和 (b,b’)，如果 a,b 构成矛盾关系，那么选择 a 就必须选择 b’，同样，选择 b 就必须选择 a’，这样我们建立一张有向图，如果存在边 a-&amp;gt;b 则说明选择 a 的同时必须选择 b，Tarjan 跑一下强联通分量，如果一对夫妻属于同一个强联通分量中就是不合法的。">
-<meta property="og:updated_time" content="2017-08-01T20:04:13.651Z">
+<meta property="og:site_name" content="zxnm19980609&#39;s Blog">
+<meta property="og:description" content="链接  题意中文题面，不解释。 分析$2-SAT$模板题。将每个人看做一个点，对于两对夫妻$(a,a’)$和$(b,b’)$，如果$a,b$构成矛盾关系，那么选择$a$就必须选择$b’$，同样，选择$b$就必须选择$a’$，这样我们建立一张有向图，如果存在边$a-&amp;gt;b$则说明选择$a$的同时必须选择$b$，$Tarjan$跑一下强联通分量，如果一对夫妻属于同一个强联通分量中就是不合法的。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-11-08T08:43:50.641Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HDOJ-3062 Party">
-<meta name="twitter:description" content="链接
-
-题意中文题面，不解释。
-分析2-SAT 模板题。将每个人看做一个点，对于两对夫妻 (a,a’) 和 (b,b’)，如果 a,b 构成矛盾关系，那么选择 a 就必须选择 b’，同样，选择 b 就必须选择 a’，这样我们建立一张有向图，如果存在边 a-&amp;gt;b 则说明选择 a 的同时必须选择 b，Tarjan 跑一下强联通分量，如果一对夫妻属于同一个强联通分量中就是不合法的。">
+<meta name="twitter:description" content="链接  题意中文题面，不解释。 分析$2-SAT$模板题。将每个人看做一个点，对于两对夫妻$(a,a’)$和$(b,b’)$，如果$a,b$构成矛盾关系，那么选择$a$就必须选择$b’$，同样，选择$b$就必须选择$a’$，这样我们建立一张有向图，如果存在边$a-&amp;gt;b$则说明选择$a$的同时必须选择$b$，$Tarjan$跑一下强联通分量，如果一对夫妻属于同一个强联通分量中就是不合法的。">
 
 
 
@@ -397,7 +390,7 @@
 <p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=3062" target="_blank" rel="external">链接</a></p>
 </blockquote>
 <h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>中文题面，不解释。</p>
-<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>2-SAT 模板题。将每个人看做一个点，对于两对夫妻 (a,a’) 和 (b,b’)，如果 a,b 构成矛盾关系，那么选择 a 就必须选择 b’，同样，选择 b 就必须选择 a’，这样我们建立一张有向图，如果存在边 a-&gt;b 则说明选择 a 的同时必须选择 b，Tarjan 跑一下强联通分量，如果一对夫妻属于同一个强联通分量中就是不合法的。<br><a id="more"></a></p>
+<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>$2-SAT$模板题。将每个人看做一个点，对于两对夫妻$(a,a’)$和$(b,b’)$，如果$a,b$构成矛盾关系，那么选择$a$就必须选择$b’$，同样，选择$b$就必须选择$a’$，这样我们建立一张有向图，如果存在边$a-&gt;b$则说明选择$a$的同时必须选择$b$，$Tarjan$跑一下强联通分量，如果一对夫妻属于同一个强联通分量中就是不合法的。<br><a id="more"></a></p>
 <h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stack&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">2010</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxm = <span class="number">4000010</span>;</div><div class="line"><span class="keyword">class</span> CNode &#123;</div><div class="line">   <span class="keyword">public</span>:</div><div class="line">    <span class="keyword">int</span> x, nxt;</div><div class="line">&#125;;</div><div class="line"><span class="keyword">int</span> n, m;</div><div class="line"><span class="keyword">int</span> h[maxn], len;</div><div class="line"><span class="keyword">int</span> dfn[maxn], low[maxn], belong[maxn], timestamp, color;</div><div class="line"><span class="keyword">bool</span> vis[maxn];</div><div class="line">CNode edge[maxm];</div><div class="line"><span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt; s;</div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">while</span> (!s.empty()) s.pop();</div><div class="line">    len = <span class="number">0</span>;</div><div class="line">    <span class="built_in">memset</span>(h, <span class="number">0</span>, <span class="keyword">sizeof</span>(h));</div><div class="line">    <span class="built_in">memset</span>(vis, <span class="literal">false</span>, <span class="keyword">sizeof</span>(vis));</div><div class="line">    <span class="built_in">memset</span>(dfn, <span class="number">0</span>, <span class="keyword">sizeof</span>(dfn));</div><div class="line">    <span class="built_in">memset</span>(low, <span class="number">0</span>, <span class="keyword">sizeof</span>(low));</div><div class="line">    timestamp = <span class="number">0</span>;</div><div class="line">    color = <span class="number">0</span>;</div><div class="line">    <span class="built_in">memset</span>(belong, <span class="number">0</span>, <span class="keyword">sizeof</span>(belong));</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> u, <span class="keyword">int</span> v)</span> </span>&#123;</div><div class="line">    len++;</div><div class="line">    edge[len].x = v;</div><div class="line">    edge[len].nxt = h[u];</div><div class="line">    h[u] = len;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">tarjan</span><span class="params">(<span class="keyword">int</span> u)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> v;</div><div class="line">    dfn[u] = low[u] = ++timestamp;</div><div class="line">    s.push(u);</div><div class="line">    vis[u] = <span class="literal">true</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> p = h[u]; p; p = edge[p].nxt) &#123;</div><div class="line">        v = edge[p].x;</div><div class="line">        <span class="keyword">if</span> (!dfn[v]) &#123;</div><div class="line">            tarjan(v);</div><div class="line">            low[u] = min(low[u], low[v]);</div><div class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (vis[v])</div><div class="line">            low[u] = min(low[u], dfn[v]);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (low[u] == dfn[u]) &#123;</div><div class="line">        color++;</div><div class="line">        <span class="keyword">do</span> &#123;</div><div class="line">            v = s.top();</div><div class="line">            s.pop();</div><div class="line">            vis[v] = <span class="literal">false</span>;</div><div class="line">            belong[v] = color;</div><div class="line">        &#125; <span class="keyword">while</span> (u != v);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="title">judge</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2</span> * n; i += <span class="number">2</span>)</div><div class="line">        <span class="keyword">if</span> (belong[i] == belong[i + <span class="number">1</span>]) <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span> </span>&#123;</div><div class="line">    init();</div><div class="line">    <span class="keyword">int</span> A1, A2, C1, C2;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d%d%d"</span>, &amp;A1, &amp;A2, &amp;C1, &amp;C2);</div><div class="line">        add(<span class="number">2</span> * A1 + C1, <span class="number">2</span> * A2 + <span class="number">1</span> - C2);</div><div class="line">        add(<span class="number">2</span> * A2 + C2, <span class="number">2</span> * A1 + <span class="number">1</span> - C1);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2</span> * n; i += <span class="number">2</span>)</div><div class="line">        <span class="keyword">if</span> (!dfn[i]) tarjan(i);</div><div class="line">    <span class="keyword">if</span> (judge())</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"YES\n"</span>);</div><div class="line">    <span class="keyword">else</span></div><div class="line">        <span class="built_in">printf</span>(<span class="string">"NO\n"</span>);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="comment">// freopen("in.txt","r",stdin);</span></div><div class="line">    <span class="keyword">while</span> (~<span class="built_in">scanf</span>(<span class="string">"%d%d"</span>, &amp;n, &amp;m)) solve();</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
@@ -435,8 +428,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/09/BugKu-MISC-DiDa-Di/" rel="next" title="BugKu MISC 滴答~滴">
-                <i class="fa fa-chevron-left"></i> BugKu MISC 滴答~滴
+              <a href="/2017/04/07/HDOJ-3584-Cube/" rel="next" title="HDOJ-3584 Cube">
+                <i class="fa fa-chevron-left"></i> HDOJ-3584 Cube
               </a>
             
           </div>
@@ -519,7 +512,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">34</span>
+                <span class="site-state-item-count">32</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -732,24 +725,7 @@
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-
-<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-<!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
 
 
 
@@ -788,6 +764,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
 
   
 

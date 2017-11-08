@@ -87,25 +87,18 @@
 
 
 
-<meta name="description" content="链接
-
-题意给出一个n阶竞赛图（每对顶点间都有边相连的有向图），找出一个哈密顿回路（经过所有点，且每个点只经过一次），没有就输出-1。
-分析竞赛图（n != 2）一定存在哈密顿路径，但回路就不一定了，需要遍历每个点，构建一次哈密尔顿路径，再判断首尾是否相连。构建的方法也比较简单，详见代码。">
+<meta name="description" content="链接  题意给出一个$n$阶竞赛图（每对顶点间都有边相连的有向图），找出一个哈密顿回路（经过所有点，且每个点只经过一次），没有就输出$-1$。 分析竞赛图$(n != 2)$一定存在哈密顿路径，但回路就不一定了，需要遍历每个点，构建一次哈密尔顿路径，再判断首尾是否相连。构建的方法也比较简单，详见代码。">
+<meta name="keywords" content="图论,竞赛图,哈密顿回路">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HDOJ-3414 Tour Route">
 <meta property="og:url" content="http://yoursite.com/2017/09/19/HDOJ-3414-Tour-Route/index.html">
-<meta property="og:site_name" content="zxnm19980609's Blog">
-<meta property="og:description" content="链接
-
-题意给出一个n阶竞赛图（每对顶点间都有边相连的有向图），找出一个哈密顿回路（经过所有点，且每个点只经过一次），没有就输出-1。
-分析竞赛图（n != 2）一定存在哈密顿路径，但回路就不一定了，需要遍历每个点，构建一次哈密尔顿路径，再判断首尾是否相连。构建的方法也比较简单，详见代码。">
-<meta property="og:updated_time" content="2017-09-18T16:31:18.662Z">
+<meta property="og:site_name" content="zxnm19980609&#39;s Blog">
+<meta property="og:description" content="链接  题意给出一个$n$阶竞赛图（每对顶点间都有边相连的有向图），找出一个哈密顿回路（经过所有点，且每个点只经过一次），没有就输出$-1$。 分析竞赛图$(n != 2)$一定存在哈密顿路径，但回路就不一定了，需要遍历每个点，构建一次哈密尔顿路径，再判断首尾是否相连。构建的方法也比较简单，详见代码。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-11-08T08:44:52.272Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HDOJ-3414 Tour Route">
-<meta name="twitter:description" content="链接
-
-题意给出一个n阶竞赛图（每对顶点间都有边相连的有向图），找出一个哈密顿回路（经过所有点，且每个点只经过一次），没有就输出-1。
-分析竞赛图（n != 2）一定存在哈密顿路径，但回路就不一定了，需要遍历每个点，构建一次哈密尔顿路径，再判断首尾是否相连。构建的方法也比较简单，详见代码。">
+<meta name="twitter:description" content="链接  题意给出一个$n$阶竞赛图（每对顶点间都有边相连的有向图），找出一个哈密顿回路（经过所有点，且每个点只经过一次），没有就输出$-1$。 分析竞赛图$(n != 2)$一定存在哈密顿路径，但回路就不一定了，需要遍历每个点，构建一次哈密尔顿路径，再判断首尾是否相连。构建的方法也比较简单，详见代码。">
 
 
 
@@ -396,8 +389,8 @@
         <blockquote>
 <p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=3414" target="_blank" rel="external">链接</a></p>
 </blockquote>
-<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>给出一个n阶竞赛图（每对顶点间都有边相连的有向图），找出一个哈密顿回路（经过所有点，且每个点只经过一次），没有就输出-1。</p>
-<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>竞赛图（n != 2）一定存在哈密顿路径，但回路就不一定了，需要遍历每个点，构建一次哈密尔顿路径，再判断首尾是否相连。构建的方法也比较简单，详见代码。<br><a id="more"></a></p>
+<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>给出一个$n$阶竞赛图（每对顶点间都有边相连的有向图），找出一个哈密顿回路（经过所有点，且每个点只经过一次），没有就输出$-1$。</p>
+<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>竞赛图$(n != 2)$一定存在哈密顿路径，但回路就不一定了，需要遍历每个点，构建一次哈密尔顿路径，再判断首尾是否相连。构建的方法也比较简单，详见代码。<br><a id="more"></a></p>
 <h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1010</span>;</div><div class="line"><span class="keyword">int</span> n;</div><div class="line"><span class="keyword">int</span> nxt[maxn];</div><div class="line"><span class="built_in">bitset</span>&lt;maxn&gt; G[maxn];</div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">char</span> <span class="title">nc</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">static</span> <span class="keyword">char</span> buf[<span class="number">1000000</span>], *p1 = buf, *p2 = buf;</div><div class="line">    <span class="keyword">return</span> p1 == p2 &amp;&amp; (p2 = (p1 = buf) + fread(buf, <span class="number">1</span>, <span class="number">1000000</span>, <span class="built_in">stdin</span>), p1 == p2) ? <span class="string">'@'</span> : *p1++;</div><div class="line">&#125;</div><div class="line"><span class="keyword">int</span> over;</div><div class="line"><span class="keyword">inline</span> <span class="keyword">int</span> _read() &#123;</div><div class="line">    <span class="keyword">char</span> ch = nc();</div><div class="line">    <span class="keyword">int</span> s = <span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span> (!(ch &gt;= <span class="string">'0'</span> &amp;&amp; ch &lt;= <span class="string">'9'</span>)) &#123;</div><div class="line">        ch = nc();</div><div class="line">        <span class="keyword">if</span> (ch == <span class="string">'@'</span>) &#123;</div><div class="line">            over = <span class="number">1</span>;</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">while</span> (ch &gt;= <span class="string">'0'</span> &amp;&amp; ch &lt;= <span class="string">'9'</span>) &#123;</div><div class="line">        s = s * <span class="number">10</span> + ch - <span class="number">48</span>, ch = nc();</div><div class="line">        <span class="keyword">if</span> (ch == <span class="string">'@'</span>) &#123;</div><div class="line">            over = <span class="number">1</span>;</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> s;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="title">expand</span><span class="params">(<span class="keyword">int</span> s)</span> </span>&#123;</div><div class="line">    <span class="built_in">memset</span>(nxt, <span class="number">-1</span>, <span class="keyword">sizeof</span> nxt);</div><div class="line">    <span class="keyword">int</span> head = s, tail = s; <span class="comment">// head tail 分别为哈密顿路径的起点和终点</span></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) &#123;</div><div class="line">        <span class="keyword">if</span> (i == s) <span class="keyword">continue</span>;</div><div class="line">        <span class="keyword">if</span> (G[i][head]) &#123; <span class="comment">// 如果 i -&gt; head，直接插入 i 并更新 head</span></div><div class="line">            nxt[i] = head;</div><div class="line">            head = i;</div><div class="line">        &#125; <span class="keyword">else</span> &#123; <span class="comment">// 找到 pre -&gt; p 满足 pre -&gt; i 和 i -&gt; p，将 i 插入</span></div><div class="line">            <span class="keyword">int</span> pre = head, p = nxt[head];</div><div class="line">            <span class="keyword">while</span> (p != <span class="number">-1</span> &amp;&amp; G[p][i]) &#123;</div><div class="line">                pre = p;</div><div class="line">                p = nxt[p];</div><div class="line">            &#125;</div><div class="line">            nxt[pre] = i;</div><div class="line">            nxt[i] = p;</div><div class="line">            <span class="keyword">if</span> (p == <span class="number">-1</span>) tail = i; <span class="comment">// 如果 p == -1 说明 i 是最后一个点，此时更新 tail</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (G[tail][head]) &#123;</div><div class="line">        nxt[tail] = head;</div><div class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">bool</span> <span class="title">check</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i)</div><div class="line">        <span class="keyword">if</span> (expand(i)) <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">    <span class="comment">// freopen("in.txt", "r", stdin);</span></div><div class="line">    <span class="keyword">while</span> ((n = _read()) &amp;&amp; n) &#123;</div><div class="line">        <span class="keyword">int</span> t;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) G[i].reset();</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i)</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;= n; ++j) &#123;</div><div class="line">                t = _read();</div><div class="line">                <span class="keyword">if</span> (t) G[i].<span class="built_in">set</span>(j);</div><div class="line">            &#125;</div><div class="line">        <span class="keyword">if</span> (n == <span class="number">1</span>)</div><div class="line">            <span class="built_in">printf</span>(<span class="string">"1\n"</span>);</div><div class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (n == <span class="number">2</span> || !check()) &#123;</div><div class="line">            <span class="built_in">printf</span>(<span class="string">"-1\n"</span>);</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            <span class="keyword">int</span> cnt = <span class="number">0</span>, i = <span class="number">1</span>;</div><div class="line">            <span class="keyword">while</span> (++cnt &lt;= n) &#123;</div><div class="line">                <span class="built_in">printf</span>(<span class="string">"%d"</span>, i);</div><div class="line">                <span class="keyword">if</span> (cnt == n)</div><div class="line">                    <span class="built_in">printf</span>(<span class="string">"\n"</span>);</div><div class="line">                <span class="keyword">else</span></div><div class="line">                    <span class="built_in">printf</span>(<span class="string">" "</span>);</div><div class="line">                i = nxt[i];</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
@@ -523,7 +516,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">34</span>
+                <span class="site-state-item-count">32</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -736,24 +729,7 @@
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-
-<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-<!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
 
 
 
@@ -792,6 +768,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
 
   
 

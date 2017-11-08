@@ -87,25 +87,18 @@
 
 
 
-<meta name="description" content="链接
-
-题意给定一列数 \(A_1…A_n\) ，支持两种操作：1 l r 询问区间 \([l,r]\) 的区间和。2 l r 修改满足 \(l \leq i \leq r\) 的 \(A_i\) 为 \(\left \lfloor \sqrt{A_i} \right \rfloor\)
-分析区间查询+区间修改，很容易想到是线段树。如果一个数是 0 或者 1 的话，那开方之后还是它本身，所以我们">
+<meta name="description" content="链接  题意给定一列数$A_1…A_n$，支持两种操作：$1~l~r$询问区间$[l, r]$的区间和。$2~l~r$修改满足$l \leq i \leq r$的$A_i$为$\left \lfloor \sqrt{A_i} \right \rfloor$。 分析区间查询+区间修改，很容易想到是线段树。如果一个数是$0$或者$1$的话，那开方之后还是它本身，所以我们就可以不开方这个数了，加一个$">
+<meta name="keywords" content="线段树">
 <meta property="og:type" content="article">
 <meta property="og:title" content="BZOJ-3211 花神游历各国">
 <meta property="og:url" content="http://yoursite.com/2017/03/24/BZOJ-3211/index.html">
-<meta property="og:site_name" content="zxnm19980609's Blog">
-<meta property="og:description" content="链接
-
-题意给定一列数 \(A_1…A_n\) ，支持两种操作：1 l r 询问区间 \([l,r]\) 的区间和。2 l r 修改满足 \(l \leq i \leq r\) 的 \(A_i\) 为 \(\left \lfloor \sqrt{A_i} \right \rfloor\)
-分析区间查询+区间修改，很容易想到是线段树。如果一个数是 0 或者 1 的话，那开方之后还是它本身，所以我们">
-<meta property="og:updated_time" content="2017-08-01T19:58:00.253Z">
+<meta property="og:site_name" content="zxnm19980609&#39;s Blog">
+<meta property="og:description" content="链接  题意给定一列数$A_1…A_n$，支持两种操作：$1~l~r$询问区间$[l, r]$的区间和。$2~l~r$修改满足$l \leq i \leq r$的$A_i$为$\left \lfloor \sqrt{A_i} \right \rfloor$。 分析区间查询+区间修改，很容易想到是线段树。如果一个数是$0$或者$1$的话，那开方之后还是它本身，所以我们就可以不开方这个数了，加一个$">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-11-08T04:32:32.366Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BZOJ-3211 花神游历各国">
-<meta name="twitter:description" content="链接
-
-题意给定一列数 \(A_1…A_n\) ，支持两种操作：1 l r 询问区间 \([l,r]\) 的区间和。2 l r 修改满足 \(l \leq i \leq r\) 的 \(A_i\) 为 \(\left \lfloor \sqrt{A_i} \right \rfloor\)
-分析区间查询+区间修改，很容易想到是线段树。如果一个数是 0 或者 1 的话，那开方之后还是它本身，所以我们">
+<meta name="twitter:description" content="链接  题意给定一列数$A_1…A_n$，支持两种操作：$1~l~r$询问区间$[l, r]$的区间和。$2~l~r$修改满足$l \leq i \leq r$的$A_i$为$\left \lfloor \sqrt{A_i} \right \rfloor$。 分析区间查询+区间修改，很容易想到是线段树。如果一个数是$0$或者$1$的话，那开方之后还是它本身，所以我们就可以不开方这个数了，加一个$">
 
 
 
@@ -396,8 +389,8 @@
         <blockquote>
 <p><a href="https://vjudge.net/problem/HYSBZ-3211" target="_blank" rel="external">链接</a></p>
 </blockquote>
-<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>给定一列数 \(A_1…A_n\) ，支持两种操作：<br>1 l r 询问区间 \([l,r]\) 的区间和。<br>2 l r 修改满足 \(l \leq i \leq r\) 的 \(A_i\) 为 \(\left \lfloor \sqrt{A_i} \right \rfloor\)</p>
-<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>区间查询+区间修改，很容易想到是线段树。如果一个数是 0 或者 1 的话，那开方之后还是它本身，所以我们就可以不开方这个数了，加一个 tag 表示这段区间是否全是 0 或 1. 如果 tag 为 true 的话，我们就直接 return ，而其他的大于 1 的数暴力开方即可。<br><a id="more"></a></p>
+<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>给定一列数$A_1…A_n$，支持两种操作：<br>$1~l~r$询问区间$[l, r]$的区间和。<br>$2~l~r$修改满足$l \leq i \leq r$的$A_i$为$\left \lfloor \sqrt{A_i} \right \rfloor$。</p>
+<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>区间查询+区间修改，很容易想到是线段树。如果一个数是$0$或者$1$的话，那开方之后还是它本身，所以我们就可以不开方这个数了，加一个$tag$表示这段区间是否全是$0$或$1$。如果$tag$为$true$的话，我们就直接$return$，而其他的大于$1$的数暴力开方即可。<br><a id="more"></a></p>
 <h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div></pre></td><td class="code"><pre><div class="line">#include &lt;cmath&gt;</div><div class="line">#include &lt;cstdio&gt;</div><div class="line">#define lson p &lt;&lt; 1</div><div class="line">#define rson p &lt;&lt; 1 | 1</div><div class="line">using namespace std;</div><div class="line">typedef long long LL;</div><div class="line">const int maxn = 100010;</div><div class="line">class CNode &#123;</div><div class="line">   public:</div><div class="line">    int left, right;</div><div class="line">    LL sum;</div><div class="line">    bool tag;</div><div class="line">&#125;;</div><div class="line">int n, m;</div><div class="line">CNode segtree[maxn &lt;&lt; 2];</div><div class="line">void build(int p, int l, int r) &#123;</div><div class="line">    segtree[p].left = l;</div><div class="line">    segtree[p].right = r;</div><div class="line">    if (l == r) &#123;</div><div class="line">        scanf("%lld", &amp;segtree[p].sum);</div><div class="line">        if (segtree[p].sum == 1 || segtree[p].sum == 0)</div><div class="line">            segtree[p].tag = true;</div><div class="line">        else</div><div class="line">            segtree[p].tag = false;</div><div class="line">        return;</div><div class="line">    &#125;</div><div class="line">    int mid = (l + r) &gt;&gt; 1;</div><div class="line">    build(lson, l, mid);</div><div class="line">    build(rson, mid + 1, r);</div><div class="line">    segtree[p].sum = segtree[lson].sum + segtree[rson].sum;</div><div class="line">    segtree[p].tag = segtree[lson].tag &amp; segtree[rson].tag;</div><div class="line">&#125;</div><div class="line">LL query(int p, int l, int r) &#123;</div><div class="line">    if (segtree[p].left == l &amp;&amp; segtree[p].right == r) return segtree[p].sum;</div><div class="line">    int mid = (segtree[p].left + segtree[p].right) &gt;&gt; 1;</div><div class="line">    if (r &lt;= mid)</div><div class="line">        return query(lson, l, r);</div><div class="line">    else if (l &gt; mid)</div><div class="line">        return query(rson, l, r);</div><div class="line">    else</div><div class="line">        return query(lson, l, mid) + query(rson, mid + 1, r);</div><div class="line">&#125;</div><div class="line">void update(int p, int l, int r) &#123;</div><div class="line">    if (segtree[p].tag) return;</div><div class="line">    if (segtree[p].left == segtree[p].right) &#123;</div><div class="line">        segtree[p].sum = (LL)sqrt(segtree[p].sum);</div><div class="line">        if (segtree[p].sum == 1 || segtree[p].sum == 0) segtree[p].tag = true;</div><div class="line">        return;</div><div class="line">    &#125;</div><div class="line">    int mid = (segtree[p].left + segtree[p].right) &gt;&gt; 1;</div><div class="line">    if (r &lt;= mid)</div><div class="line">        update(lson, l, r);</div><div class="line">    else if (l &gt; mid)</div><div class="line">        update(rson, l, r);</div><div class="line">    else &#123;</div><div class="line">        update(lson, l, mid);</div><div class="line">        update(rson, mid + 1, r);</div><div class="line">    &#125;</div><div class="line">    segtree[p].sum = segtree[lson].sum + segtree[rson].sum;</div><div class="line">    segtree[p].tag = segtree[lson].tag &amp; segtree[rson].tag;</div><div class="line">&#125;</div><div class="line">int main() &#123;</div><div class="line">    // freopen("in.txt","r",stdin);</div><div class="line">    int x, l, r;</div><div class="line">    scanf("%d", &amp;n);</div><div class="line">    build(1, 1, n);</div><div class="line">    scanf("%d", &amp;m);</div><div class="line">    for (int i = 0; i &lt; m; i++) &#123;</div><div class="line">        scanf("%d%d%d", &amp;x, &amp;l, &amp;r);</div><div class="line">        if (x == 1)</div><div class="line">            printf("%lld\n", query(1, l, r));</div><div class="line">        else</div><div class="line">            update(1, l, r);</div><div class="line">    &#125;</div><div class="line">    return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
@@ -519,7 +512,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">34</span>
+                <span class="site-state-item-count">32</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -732,24 +725,7 @@
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-
-<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-<!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
 
 
 
@@ -788,6 +764,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
 
   
 

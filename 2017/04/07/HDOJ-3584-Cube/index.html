@@ -87,22 +87,18 @@
 
 
 
-<meta name="description" content="链接
-
-题意有一 N*N*N 的三维矩阵 A ，只有 0 和 1 两种取值，开始时每个元素都是 0，定义如下两种操作：\(1~x_1~y_1~z_1~x_2~y_2~z_2\)表示将满足\(x_1 \leq i \leq x_2 ~ \&amp;amp;\&amp;amp; ~ y_1 \leq j \leq y_2 ~ \&amp;amp;\&amp;amp; ~ z_1 \leq k \leq z_2\)的\( A_{(i">
+<meta name="description" content="链接  题意有一$N*N*N$的三维矩阵$A$，只有$0$和$1$两种取值，开始时每个元素都是$0$，定义如下两种操作：$1~x_1~y_1~z_1~x_2~y_2~z_2$表示将满足$x_1 \leq i \leq x_2 ~ \&amp;amp;\&amp;amp; ~ y_1 \leq j \leq y_2 ~ \&amp;amp;\&amp;amp; ~ z_1 \leq k \leq z_2$的$ A_{(i,j,k">
+<meta name="keywords" content="树状数组">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HDOJ-3584 Cube">
 <meta property="og:url" content="http://yoursite.com/2017/04/07/HDOJ-3584-Cube/index.html">
-<meta property="og:site_name" content="zxnm19980609's Blog">
-<meta property="og:description" content="链接
-
-题意有一 N*N*N 的三维矩阵 A ，只有 0 和 1 两种取值，开始时每个元素都是 0，定义如下两种操作：\(1~x_1~y_1~z_1~x_2~y_2~z_2\)表示将满足\(x_1 \leq i \leq x_2 ~ \&amp;amp;\&amp;amp; ~ y_1 \leq j \leq y_2 ~ \&amp;amp;\&amp;amp; ~ z_1 \leq k \leq z_2\)的\( A_{(i">
-<meta property="og:updated_time" content="2017-08-01T20:04:52.568Z">
+<meta property="og:site_name" content="zxnm19980609&#39;s Blog">
+<meta property="og:description" content="链接  题意有一$N*N*N$的三维矩阵$A$，只有$0$和$1$两种取值，开始时每个元素都是$0$，定义如下两种操作：$1~x_1~y_1~z_1~x_2~y_2~z_2$表示将满足$x_1 \leq i \leq x_2 ~ \&amp;amp;\&amp;amp; ~ y_1 \leq j \leq y_2 ~ \&amp;amp;\&amp;amp; ~ z_1 \leq k \leq z_2$的$ A_{(i,j,k">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-11-08T08:52:42.312Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HDOJ-3584 Cube">
-<meta name="twitter:description" content="链接
-
-题意有一 N*N*N 的三维矩阵 A ，只有 0 和 1 两种取值，开始时每个元素都是 0，定义如下两种操作：\(1~x_1~y_1~z_1~x_2~y_2~z_2\)表示将满足\(x_1 \leq i \leq x_2 ~ \&amp;amp;\&amp;amp; ~ y_1 \leq j \leq y_2 ~ \&amp;amp;\&amp;amp; ~ z_1 \leq k \leq z_2\)的\( A_{(i">
+<meta name="twitter:description" content="链接  题意有一$N*N*N$的三维矩阵$A$，只有$0$和$1$两种取值，开始时每个元素都是$0$，定义如下两种操作：$1~x_1~y_1~z_1~x_2~y_2~z_2$表示将满足$x_1 \leq i \leq x_2 ~ \&amp;amp;\&amp;amp; ~ y_1 \leq j \leq y_2 ~ \&amp;amp;\&amp;amp; ~ z_1 \leq k \leq z_2$的$ A_{(i,j,k">
 
 
 
@@ -393,7 +389,7 @@
         <blockquote>
 <p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=3584" target="_blank" rel="external">链接</a></p>
 </blockquote>
-<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>有一 N*N*N 的三维矩阵 A ，只有 0 和 1 两种取值，开始时每个元素都是 0，定义如下两种操作：<br>\(1~x_1~y_1~z_1~x_2~y_2~z_2\)表示将满足\(x_1 \leq i \leq x_2 ~ \&amp;\&amp; ~ y_1 \leq j \leq y_2 ~ \&amp;\&amp; ~ z_1 \leq k \leq z_2\)的\( A_{(i,j,k)}\)取反。<br>\(0~x~y~z\)表示查询现在\(A_{(x,y,z)}\)的值。</p>
+<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>有一$N*N*N$的三维矩阵$A$，只有$0$和$1$两种取值，开始时每个元素都是$0$，定义如下两种操作：<br>$1~x_1~y_1~z_1~x_2~y_2~z_2$表示将满足$x_1 \leq i \leq x_2 ~ \&amp;\&amp; ~ y_1 \leq j \leq y_2 ~ \&amp;\&amp; ~ z_1 \leq k \leq z_2$的$ A_{(i,j,k)}$取反。<br>$0~x~y~z$表示查询现在$A_{(x,y,z)}$的值。</p>
 <h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>三维树状数组的模板题。<br>关于树状数组，我感觉这两位大牛讲的很好，感谢。</p>
 <blockquote>
 <p><a href="http://lib.csdn.net/article/c/41020" target="_blank" rel="external">xuzengqiang</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.cnblogs.com/cchun/archive/2011/05/10/2520086.html" target="_blank" rel="external">cchun</a></p>
@@ -446,8 +442,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/04/09/BugKu-MISC-DiDa-Di/" rel="prev" title="BugKu MISC 滴答~滴">
-                BugKu MISC 滴答~滴 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/04/26/HDOJ-3062-Party/" rel="prev" title="HDOJ-3062 Party">
+                HDOJ-3062 Party <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -520,7 +516,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">34</span>
+                <span class="site-state-item-count">32</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -733,24 +729,7 @@
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-
-<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-<!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
 
 
 
@@ -789,6 +768,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
 
   
 
