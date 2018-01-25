@@ -281,6 +281,165 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/11/HDOJ-3732-Ahui-Writes-Word/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="筽邝">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zxnm19980609's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/03/11/HDOJ-3732-Ahui-Writes-Word/" itemprop="url">
+                  HDOJ-3732 Ahui Writes Word
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-11T15:34:02+08:00">
+                2017-03-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/解题报告/" itemprop="url" rel="index">
+                    <span itemprop="name">解题报告</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/解题报告/HDOJ/" itemprop="url" rel="index">
+                    <span itemprop="name">HDOJ</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=3732" target="_blank" rel="external">链接</a></p>
+</blockquote>
+<h1 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h1><p>有$n$件物品，背包容量为$c$，每件物品具有价值$v_i$，体积$c_i$，求背包能装的最大价值。</p>
+<h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><p>第一次按照普通的$01$背包做的，$TLE$ 。考虑$v_i$和$c_i$的范围，均为$[0,10]$，所以最多$121$种物品，而$n$的范围是$1 ≤ N ≤ 100000$，所以肯定有很多重复的物品，可以看成 <strong>多重背包+二进制优化</strong> 转化成新的$01$背包，最后降维即可$AC$。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/11/HDOJ-3732-Ahui-Writes-Word/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/11/POJ-3468-A-Simple-Problem-with-Integers/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -393,8 +552,10 @@
           <blockquote>
 <p><a href="https://vjudge.net/problem/POJ-3468" target="_blank" rel="external">链接</a></p>
 </blockquote>
-<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>给定$n$个数，$A_1,A_2,…,A_n$，支持以下两种操作：<br>$Q~a~b$表示查询$[a,b]$的区间和。<br>$C~a~b~c$表示将$[a,b]$中每个数加$c$。</p>
-<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>区间操作+区间查询，线段树+$lazyTag$的模板题。<br>
+<h1 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h1><p>给定$n$个数，$A_1,A_2,\dots,A_n$，支持以下两种操作：</p>
+<p>$Q~a~b$表示查询$[a,b]$的区间和</p>
+<p>$C~a~b~c$表示将$[a,b]$中每个数加$c$</p>
+<h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><p>区间操作+区间查询，线段树+$lazyTag$的模板题。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/03/11/POJ-3468-A-Simple-Problem-with-Integers/#more" rel="contents">
@@ -552,8 +713,8 @@
           <blockquote>
 <p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1932" target="_blank" rel="external">链接</a></p>
 </blockquote>
-<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>在笛卡尔坐标系中有$n$棵树，用一条绳子将所有树全都围起来，求所需绳子长度的最小值。</p>
-<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>凸包的模板题。但是数据有坑点，如果只有两个点，直接输出两点距离即可。<br>
+<h1 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h1><p>在笛卡尔坐标系中有$n$棵树，用一条绳子将所有树全都围起来，求所需绳子长度的最小值。</p>
+<h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><p>凸包的模板题。但是数据有坑点，如果只有两个点，直接输出两点距离即可。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/03/09/HDOJ-1392-Surround-the-Trees/#more" rel="contents">
@@ -711,170 +872,11 @@
           <blockquote>
 <p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=2509" target="_blank" rel="external">链接</a></p>
 </blockquote>
-<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>$n$堆石子，一次可以在一堆中取任意数量，但不可以不取，最后一个取完的人输。</p>
-<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>$Nim$博弈的变形。$n$堆全是$1$的时候，特殊判断，奇数必输，偶数必赢。其它情况按照$Nim$博弈做即可。<br>
+<h1 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h1><p>$n$堆石子，一次可以在一堆中取任意数量，但不可以不取，最后一个取完的人输。</p>
+<h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><p>$Nim$博弈的变形。$n$堆全是$1$的时候，特殊判断，奇数必输，偶数必赢。其它情况按照$Nim$博弈做即可。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/03/09/HDOJ-2509-Be-the-Winner/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/05/HDOJ-1535-Invitation-Cards/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="筽邝">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zxnm19980609's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/05/HDOJ-1535-Invitation-Cards/" itemprop="url">
-                  HDOJ-1535 Invitation Cards
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-05T22:22:31+08:00">
-                2017-03-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/解题报告/" itemprop="url" rel="index">
-                    <span itemprop="name">解题报告</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/解题报告/HDOJ/" itemprop="url" rel="index">
-                    <span itemprop="name">HDOJ</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1535" target="_blank" rel="external">链接</a></p>
-</blockquote>
-<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>在有向图中，求从出发点到每个车站的最短距离+从每个车站回到出发点的最短距离是多少。</p>
-<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>出发点到每个车站的最短距离一次$SPFA$就能求出来。从每个车站回到出发点可以反向建图，再求一次出发点到每个车站的$SPFA$就能解决。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/03/05/HDOJ-1535-Invitation-Cards/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -957,7 +959,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">33</span>
+                <span class="site-state-item-count">34</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1051,7 +1053,7 @@
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

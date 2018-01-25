@@ -87,18 +87,18 @@
 
 
 
-<meta name="description" content="链接  题意$f(x)=a_1*f(n-1)+a_2*f(n-2)+…+a_d*f(n-d),n&amp;gt;d$计算$f(n) \bmod m$的值。 分析简单的矩阵快速幂。  \begin{bmatrix} f(d) &amp; f(d-1) &amp; \cdots\ &amp; f(1) \end{bmatrix} \times \begin{bmatrix} a_1 &amp; 0 &amp; 0 &amp; \cdots\ &amp; 0 \\">
+<meta name="description" content="链接  题意$f(x)=a_1*f(n-1)+a_2*f(n-2)+…+a_d*f(n-d),n&amp;gt;d$ 计算$f(n) \bmod m$的值。 分析简单的矩阵快速幂。   \begin{bmatrix} f(d) &amp; f(d-1) &amp; \cdots\ &amp; f(1) \end{bmatrix}  \times  \begin{bmatrix} a_1 &amp; 0 &amp; 0 &amp; \cdots &amp; 0">
 <meta name="keywords" content="矩阵快速幂">
 <meta property="og:type" content="article">
 <meta property="og:title" content="UVA-10870 Recurrences">
 <meta property="og:url" content="http://yoursite.com/2017/03/17/UVA-10870-Recurrences/index.html">
 <meta property="og:site_name" content="zxnm19980609&#39;s Blog">
-<meta property="og:description" content="链接  题意$f(x)=a_1*f(n-1)+a_2*f(n-2)+…+a_d*f(n-d),n&amp;gt;d$计算$f(n) \bmod m$的值。 分析简单的矩阵快速幂。  \begin{bmatrix} f(d) &amp; f(d-1) &amp; \cdots\ &amp; f(1) \end{bmatrix} \times \begin{bmatrix} a_1 &amp; 0 &amp; 0 &amp; \cdots\ &amp; 0 \\">
+<meta property="og:description" content="链接  题意$f(x)=a_1*f(n-1)+a_2*f(n-2)+…+a_d*f(n-d),n&amp;gt;d$ 计算$f(n) \bmod m$的值。 分析简单的矩阵快速幂。   \begin{bmatrix} f(d) &amp; f(d-1) &amp; \cdots\ &amp; f(1) \end{bmatrix}  \times  \begin{bmatrix} a_1 &amp; 0 &amp; 0 &amp; \cdots &amp; 0">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-08T16:39:40.219Z">
+<meta property="og:updated_time" content="2018-01-25T13:08:41.828Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="UVA-10870 Recurrences">
-<meta name="twitter:description" content="链接  题意$f(x)=a_1*f(n-1)+a_2*f(n-2)+…+a_d*f(n-d),n&amp;gt;d$计算$f(n) \bmod m$的值。 分析简单的矩阵快速幂。  \begin{bmatrix} f(d) &amp; f(d-1) &amp; \cdots\ &amp; f(1) \end{bmatrix} \times \begin{bmatrix} a_1 &amp; 0 &amp; 0 &amp; \cdots\ &amp; 0 \\">
+<meta name="twitter:description" content="链接  题意$f(x)=a_1*f(n-1)+a_2*f(n-2)+…+a_d*f(n-d),n&amp;gt;d$ 计算$f(n) \bmod m$的值。 分析简单的矩阵快速幂。   \begin{bmatrix} f(d) &amp; f(d-1) &amp; \cdots\ &amp; f(1) \end{bmatrix}  \times  \begin{bmatrix} a_1 &amp; 0 &amp; 0 &amp; \cdots &amp; 0">
 
 
 
@@ -389,26 +389,34 @@
         <blockquote>
 <p><a href="https://vjudge.net/problem/UVA-10870" target="_blank" rel="external">链接</a></p>
 </blockquote>
-<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>$f(x)=a_1*f(n-1)+a_2*f(n-2)+…+a_d*f(n-d),n&gt;d$<br>计算$f(n) \bmod m$的值。</p>
-<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>简单的矩阵快速幂。</p>
+<h1 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h1><p>$f(x)=a_1*f(n-1)+a_2*f(n-2)+…+a_d*f(n-d),n&gt;d$ 计算$f(n) \bmod m$的值。</p>
+<h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><p>简单的矩阵快速幂。</p>
 <script type="math/tex; mode=display">
+
 \begin{bmatrix}
 f(d) & f(d-1) & \cdots\ & f(1)
 \end{bmatrix}
+
 \times
+
 \begin{bmatrix}
-a_1 & 0 & 0 & \cdots\ & 0 \\
-a_2 & 1 & 0 & \cdots\ & 0 \\
-a_3 & 0 & 1 & \cdots\ & 0 \\
-\vdots\ & \vdots\ & \vdots\ & \ddots\ & \vdots\ \\
-a_{d-1} & 0 & 0 & \cdots\ & 1 \\
-a_d & 0 & 0 & \cdots\ & 0 \\
+a_1 & 0 & 0 & \cdots & 0 \\
+a_2 & 1 & 0 & \cdots & 0 \\
+a_3 & 0 & 1 & \cdots & 0 \\
+\vdots\ & \vdots\ & \vdots & \ddots\ & \vdots \\
+a_{d-1} & 0 & 0 & \cdots & 1 \\
+a_d & 0 & 0 & \cdots & 0 \\
 \end{bmatrix}^{(n-d)}
+
 =
-\begin{bmatrix}
-f(n) & f(n-1) & \cdots\ & f(n-d+1)
-\end{bmatrix}</script><p>Tips:<br>①输入的时候就要取模，不然会爆$int$。<br>②$n-d \leq 0$的时候直接输出。<br><a id="more"></a></p>
-<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div></pre></td><td class="code"><pre><div class="line">#include &lt;cstdio&gt;</div><div class="line">#include &lt;cstring&gt;</div><div class="line">using namespace std;</div><div class="line">class CMatrix &#123;</div><div class="line">   public:</div><div class="line">    int data[20][20];</div><div class="line">    CMatrix() &#123;&#125;</div><div class="line">    CMatrix(int x) &#123;</div><div class="line">        memset(data, 0, sizeof(data));</div><div class="line">        for (int i = 0; i &lt; 20; i++) data[i][i] = x;</div><div class="line">    &#125;</div><div class="line">    void clean() &#123; memset(data, 0, sizeof(data)); &#125;</div><div class="line">&#125;;</div><div class="line">int d, n, m;</div><div class="line">CMatrix ans, coe;</div><div class="line">CMatrix mul(CMatrix &amp;a, CMatrix &amp;b) &#123;</div><div class="line">    CMatrix ret;</div><div class="line">    for (int i = 0; i &lt; d; i++)</div><div class="line">        for (int j = 0; j &lt; d; j++) &#123;</div><div class="line">            int sum = 0;</div><div class="line">            for (int k = 0; k &lt; d; k++) sum = (sum + a.data[i][k] * b.data[k][j] % m) % m;</div><div class="line">            ret.data[i][j] = sum;</div><div class="line">        &#125;</div><div class="line">    return ret;</div><div class="line">&#125;</div><div class="line">CMatrix quick_pow(int b) &#123;</div><div class="line">    CMatrix t(1), y = coe;</div><div class="line">    while (b) &#123;</div><div class="line">        if (b &amp; 1) t = mul(t, y);</div><div class="line">        y = mul(y, y);</div><div class="line">        b &gt;&gt;= 1;</div><div class="line">    &#125;</div><div class="line">    return t;</div><div class="line">&#125;</div><div class="line">inline void solve() &#123;</div><div class="line">    ans.clean();</div><div class="line">    coe.clean();</div><div class="line">    for (int i = 0; i &lt; d; i++) &#123;</div><div class="line">        scanf("%d", &amp;coe.data[i][0]);</div><div class="line">        coe.data[i][0] %= m;</div><div class="line">    &#125;</div><div class="line">    for (int i = 1, k = 0; i &lt; d; i++, k++) coe.data[k][i] = 1;</div><div class="line">    for (int i = d - 1; i &gt;= 0; i--) &#123;</div><div class="line">        scanf("%d", &amp;ans.data[0][i]);</div><div class="line">        ans.data[0][i] %= m;</div><div class="line">    &#125;</div><div class="line">    if (n &gt; d) &#123;</div><div class="line">        coe = quick_pow(n - d);</div><div class="line">        ans = mul(ans, coe);</div><div class="line">        printf("%d\n", ans.data[0][0]);</div><div class="line">    &#125; else</div><div class="line">        printf("%d\n", ans.data[0][d - n]);</div><div class="line">&#125;</div><div class="line">int main() &#123;</div><div class="line">    while (~scanf("%d%d%d", &amp;d, &amp;n, &amp;m)) &#123;</div><div class="line">        if (d + n + m == 0) break;</div><div class="line">        solve();</div><div class="line">    &#125;</div><div class="line">    return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+\begin{bmatrix} f(n) & f(n-1) & \cdots\ & f(n-d+1) \end{bmatrix}</script><p><strong>Tips:</strong></p>
+<ol>
+<li>输入的时候就要取模，不然会爆$int$。</li>
+<li>$n-d \leq 0$的时候直接输出。</li>
+</ol>
+<a id="more"></a>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div></pre></td><td class="code"><pre><div class="line">#include &lt;cstdio&gt;</div><div class="line">#include &lt;cstring&gt;</div><div class="line">using namespace std;</div><div class="line">class CMatrix &#123;</div><div class="line">   public:</div><div class="line">    int data[20][20];</div><div class="line">    CMatrix() &#123;&#125;</div><div class="line">    CMatrix(int x) &#123;</div><div class="line">        memset(data, 0, sizeof(data));</div><div class="line">        for (int i = 0; i &lt; 20; i++) data[i][i] = x;</div><div class="line">    &#125;</div><div class="line">    void clean() &#123; memset(data, 0, sizeof(data)); &#125;</div><div class="line">&#125;;</div><div class="line">int d, n, m;</div><div class="line">CMatrix ans, coe;</div><div class="line">CMatrix mul(CMatrix &amp;a, CMatrix &amp;b) &#123;</div><div class="line">    CMatrix ret;</div><div class="line">    for (int i = 0; i &lt; d; i++)</div><div class="line">        for (int j = 0; j &lt; d; j++) &#123;</div><div class="line">            int sum = 0;</div><div class="line">            for (int k = 0; k &lt; d; k++) sum = (sum + a.data[i][k] * b.data[k][j] % m) % m;</div><div class="line">            ret.data[i][j] = sum;</div><div class="line">        &#125;</div><div class="line">    return ret;</div><div class="line">&#125;</div><div class="line">CMatrix quick_pow(int b) &#123;</div><div class="line">    CMatrix t(1), y = coe;</div><div class="line">    while (b) &#123;</div><div class="line">        if (b &amp; 1) t = mul(t, y);</div><div class="line">        y = mul(y, y);</div><div class="line">        b &gt;&gt;= 1;</div><div class="line">    &#125;</div><div class="line">    return t;</div><div class="line">&#125;</div><div class="line">inline void solve() &#123;</div><div class="line">    ans.clean();</div><div class="line">    coe.clean();</div><div class="line">    for (int i = 0; i &lt; d; i++) &#123;</div><div class="line">        scanf("%d", &amp;coe.data[i][0]);</div><div class="line">        coe.data[i][0] %= m;</div><div class="line">    &#125;</div><div class="line">    for (int i = 1, k = 0; i &lt; d; i++, k++) coe.data[k][i] = 1;</div><div class="line">    for (int i = d - 1; i &gt;= 0; i--) &#123;</div><div class="line">        scanf("%d", &amp;ans.data[0][i]);</div><div class="line">        ans.data[0][i] %= m;</div><div class="line">    &#125;</div><div class="line">    if (n &gt; d) &#123;</div><div class="line">        coe = quick_pow(n - d);</div><div class="line">        ans = mul(ans, coe);</div><div class="line">        printf("%d\n", ans.data[0][0]);</div><div class="line">    &#125; else</div><div class="line">        printf("%d\n", ans.data[0][d - n]);</div><div class="line">&#125;</div><div class="line">int main() &#123;</div><div class="line">    while (~scanf("%d%d%d", &amp;d, &amp;n, &amp;m)) &#123;</div><div class="line">        if (d + n + m == 0) break;</div><div class="line">        solve();</div><div class="line">    &#125;</div><div class="line">    return 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -529,7 +537,7 @@ f(n) & f(n-1) & \cdots\ & f(n-d+1)
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">33</span>
+                <span class="site-state-item-count">34</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -616,7 +624,7 @@ f(n) & f(n-1) & \cdots\ & f(n-d+1)
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题意"><span class="nav-number">1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分析"><span class="nav-number">2.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#题意"><span class="nav-number">1.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分析"><span class="nav-number">2.</span> <span class="nav-text">分析</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li></ol></div>
             
 
           </div>
@@ -639,7 +647,7 @@ f(n) & f(n-1) & \cdots\ & f(n-d+1)
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

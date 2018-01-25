@@ -281,6 +281,168 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/02/HDOJ-1538-A-Puzzle-for-Pirates/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="筽邝">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zxnm19980609's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/02/HDOJ-1538-A-Puzzle-for-Pirates/" itemprop="url">
+                  HDOJ-1538 A Puzzle for Pirates
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-02T17:15:10+08:00">
+                2017-04-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/解题报告/" itemprop="url" rel="index">
+                    <span itemprop="name">解题报告</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/解题报告/HDOJ/" itemprop="url" rel="index">
+                    <span itemprop="name">HDOJ</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1538" target="_blank" rel="external">链接</a></p>
+</blockquote>
+<h1 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h1><p>博弈论经典问题海盗分金，详情移步分析中两位大神的博客，在这里就不做具体的解释了。 给定$n~m~p$，询问$n$个人，$m$块金子的情况下，第$p$个人的情况，如果被杀死，输出”Thrown”，否则输出他能分到的金子数。</p>
+<h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><blockquote>
+<p><a href="http://blog.csdn.net/qiqijianglu/article/details/7939247" target="_blank" rel="external">qiqijianglu</a><br>  <a href="http://blog.csdn.net/acm_cxlove/article/details/7853916" target="_blank" rel="external">ACM_cxlove</a></p>
+</blockquote>
+<p>感谢两位大神详细的讲解！感谢两位大神详细的讲解！感谢两位大神详细的讲解！ 重要的感谢说三遍…</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/04/02/HDOJ-1538-A-Puzzle-for-Pirates/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/01/POJ-2983-Is-the-Information-Reliable/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -393,11 +555,13 @@
           <blockquote>
 <p><a href="https://vjudge.net/problem/POJ-2983" target="_blank" rel="external">链接</a></p>
 </blockquote>
-<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>给出两种关于防御站位置的信息，一种是确切的信息$P~A~B~X$，表示$A$在$B$的北面$X$距离的地方，另一种是$V~A~B$，表示只知道$A$在$B$的北面。问这些信息是否存在矛盾。</p>
-<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>差分约束<br>第一种可以表示为$A-B \leq X~\&amp;\&amp;~A-B \geq X$<br>第二种可以表示为$A-B \geq 1$<br>然后都转化为小于等于的不等式，建图，跑一遍$SPFA$求最短路。若存在最短路说明无矛盾，若存在负权回路说明有矛盾。<br>Tips:</p>
+<h1 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h1><p>给出两种关于防御站位置的信息，一种是确切的信息$P~A~B~X$，表示$A$在$B$的北面$X$距离的地方，另一种是$V~A~B$，表示只知道$A$在$B$的北面。问这些信息是否存在矛盾。</p>
+<h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><p>差分约束。第一种可以表示为$A-B \leq X~\&amp;\&amp;~A-B \geq X$ 第二种可以表示为$A-B \geq 1$ 然后都转化为小于等于的不等式，建图，跑一遍$SPFA$求最短路。若存在最短路说明无矛盾，若存在负权回路说明有矛盾。</p>
+<p>Tips:</p>
 <ol>
 <li>注意建图后有可能不是连通图，所以我们加一个超级源点$S$，将$S$与$1$到$n$每个点都连一条边权为$0$的边，保证图的连通性，然后做$S$的单源最短路判断。</li>
-<li>这题我是玄学$AC$的，$G++$怎么交也不过，换成$C++$交就$AC$了。
+<li>这题我是玄学$AC$的，$G++$怎么交也不过，换成$C++$交就$AC$了。</li>
+</ol>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/04/01/POJ-2983-Is-the-Information-Reliable/#more" rel="contents">
@@ -555,11 +719,11 @@
           <blockquote>
 <p><a href="https://vjudge.net/problem/UVA-11090" target="_blank" rel="external">链接</a></p>
 </blockquote>
-<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>有一张带权有向图，有$n$个点，$m$条边。如果无环则输出”No cycle found.”否则求一个最小的环平均权值。（环平均权值=环上边权值之和/环上边的数量）</p>
-<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><script type="math/tex; mode=display">
+<h1 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h1><p>有一张带权有向图，有$n$个点，$m$条边。如果无环则输出”No cycle found.”否则求一个最小的环平均权值。（环平均权值=环上边权值之和/环上边的数量）</p>
+<h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><script type="math/tex; mode=display">
 Cycle_k's~Minimum~Mean=\frac{\sum_{i=1}^n E_i\left [ i~is~an~Edge~in~Cycle_k \right ]}{\sum_{i=1}^n 1\left [ i~is~an~Edge~in~Cycle_k \right ]}</script><p>我们把上面等式环上边的数量乘到等式的左边，然后再把等式两边同时减去等式的右边，就变成了这样一个形式：</p>
 <script type="math/tex; mode=display">
-\sum_{i=1}^n \left (E_i-Cycle_k's~Minimum~Mean \right )\left [ i~is~an~Edge~in~Cycle_k \right ] = 0</script><p>所以我们可以二分答案$ans$，将每条边的边权$w$修改为$w-ans$，用$SPFA$判断是否存在负权回路，若存在则说明有更小的答案，否则反之。<br>
+\sum_{i=1}^n \left (E_i-Cycle_k's~Minimum~Mean \right )\left [ i~is~an~Edge~in~Cycle_k \right ] = 0</script><p>所以我们可以二分答案$ans$，将每条边的边权$w$修改为$w-ans$，用$SPFA$判断是否存在负权回路，若存在则说明有更小的答案，否则反之。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/03/30/UVA-11090-Going-in-Cycle!!/#more" rel="contents">
@@ -717,172 +881,13 @@ Cycle_k's~Minimum~Mean=\frac{\sum_{i=1}^n E_i\left [ i~is~an~Edge~in~Cycle_k \ri
           <blockquote>
 <p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=2955" target="_blank" rel="external">链接</a></p>
 </blockquote>
-<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>有一个人要去抢劫银行。共有$n$个银行，抢劫第$i$个银行会得到$M_i$的钱，会有$P_i$的概率被抓。给出一个被抓概率$P$，要求在被抓概率不大于$P$的同时抢到的钱数最多。</p>
-<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>概率是浮点数，肯定不能用作背包的容量，那就考虑将概率作为背包的价值，把钱作为背包容量。很容易想到$dp_i$表示抢到i的钱逃跑成功的最大概率。首先题目给出的是被抓的概率，所以 $p_i=1-p_i$算出抢劫第$i$个银行成功逃跑的概率。因为概率的乘法公式，得到递推公式：</p>
+<h1 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h1><p>有一个人要去抢劫银行。共有$n$个银行，抢劫第$i$个银行会得到$M_i$的钱，会有$P_i$的概率被抓。给出一个被抓概率$P$，要求在被抓概率不大于$P$的同时抢到的钱数最多。</p>
+<h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><p>概率是浮点数，肯定不能用作背包的容量，那就考虑将概率作为背包的价值，把钱作为背包容量。很容易想到$dp_i$表示抢到$i$的钱逃跑成功的最大概率。首先题目给出的是被抓的概率，所以$p_i=1-p_i$算出抢劫第$i$个银行成功逃跑的概率。因为概率的乘法公式，得到递推公式：</p>
 <script type="math/tex; mode=display">
-dp[i][j]=max\{dp[i-1][j],dp[i-1][j-M[i]]*P[i]\},j \geq M[i]</script><p>初始化$dp[i][0]$为$1$，因为什么也不抢肯定不会被抓=-=加上降维就能$AC$了<br>
+dp[i][j]=max{dp[i-1][j],dp[i-1][j-M[i]]*P[i]},j \geq M[i]</script><p>初始化$dp[i][0]$为$1$，因为什么也不抢肯定不会被抓=-=加上降维就能$AC$了</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/03/28/HDOJ-2955-Robberies/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/28/HDOJ-1599-find-the-mincost-route/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="筽邝">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zxnm19980609's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/28/HDOJ-1599-find-the-mincost-route/" itemprop="url">
-                  HDOJ-1599 find the mincost route
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-28T14:58:31+08:00">
-                2017-03-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/解题报告/" itemprop="url" rel="index">
-                    <span itemprop="name">解题报告</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/解题报告/HDOJ/" itemprop="url" rel="index">
-                    <span itemprop="name">HDOJ</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1599" target="_blank" rel="external">链接</a></p>
-</blockquote>
-<h4 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h4><p>求一个无向图中从$A$点出发最后回到$A$点的路径，包含至少三个点，并且花费最小。</p>
-<h4 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h4><p>$Floyd$求最小环的模板题，详见代码。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/03/28/HDOJ-1599-find-the-mincost-route/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -965,7 +970,7 @@ dp[i][j]=max\{dp[i-1][j],dp[i-1][j-M[i]]*P[i]\},j \geq M[i]</script><p>初始化
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">33</span>
+                <span class="site-state-item-count">34</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1059,7 +1064,7 @@ dp[i][j]=max\{dp[i-1][j],dp[i-1][j-M[i]]*P[i]\},j \geq M[i]</script><p>初始化
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
